@@ -2,78 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:54212/</loc>
+    <loc>https://Manunited.github.io/</loc>
     <lastmod>2024-11-12T20:43:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:54212/en/"
+                href="https://Manunited.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://localhost:54212/ar/"
+                href="https://Manunited.github.io/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:54212/"
+                href="https://Manunited.github.io/"
                 />
   </url><url>
-    <loc>http://localhost:54212/p/mark-down%E8%AF%AD%E6%B3%95/</loc>
+    <loc>https://Manunited.github.io/p/mark-down%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2024-11-12T20:43:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:54212/post/</loc>
+    <loc>https://Manunited.github.io/post/</loc>
     <lastmod>2024-11-12T20:43:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:54212/archives/</loc>
+    <loc>https://Manunited.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:54212/page/</loc>
+    <loc>https://Manunited.github.io/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:54212/p/</loc>
+    <loc>https://Manunited.github.io/p/</loc>
   </url><url>
-    <loc>http://localhost:54212/categories/</loc>
+    <loc>https://Manunited.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:54212/en/categories/"
+                href="https://Manunited.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://localhost:54212/ar/categories/"
+                href="https://Manunited.github.io/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:54212/categories/"
+                href="https://Manunited.github.io/categories/"
                 />
   </url><url>
-    <loc>http://localhost:54212/links/</loc>
+    <loc>https://Manunited.github.io/links/</loc>
   </url><url>
-    <loc>http://localhost:54212/search/</loc>
+    <loc>https://Manunited.github.io/search/</loc>
   </url><url>
-    <loc>http://localhost:54212/tags/</loc>
+    <loc>https://Manunited.github.io/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:54212/en/tags/"
+                href="https://Manunited.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://localhost:54212/ar/tags/"
+                href="https://Manunited.github.io/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:54212/tags/"
+                href="https://Manunited.github.io/tags/"
                 />
   </url><url>
-    <loc>http://localhost:54212/categories/test/</loc>
+    <loc>https://Manunited.github.io/categories/test/</loc>
   </url><url>
-    <loc>http://localhost:54212/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://Manunited.github.io/%E5%85%B3%E4%BA%8E/</loc>
   </url>
 </urlset>
