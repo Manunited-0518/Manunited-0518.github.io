@@ -91,8 +91,97 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;表格&#34;&gt;表格
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Eg.| 名称 | 年龄 | 性别 |
+| &amp;mdash; | &amp;mdash; | &amp;mdash; |
+最上一排就是表头，需要在左右使用|表示这是一个表格，同时，下方需要添加分割线，分割线使用-减号表示，写一个或多个都可以，推荐与表的宽度一致，更加美观。这样，就可以顺利展示为一个表格了&lt;/li&gt;
+&lt;li&gt;:&amp;mdash; 为左对齐
+&amp;mdash;: 为右对齐
+:&amp;mdash;: 为居中对齐&lt;/li&gt;
+&lt;li&gt;表格中也可以嵌套使用诸如加粗、斜体、行内代码块这类Markdown语法&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;html标签&#34;&gt;HTML标签
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;markdown中可以支持HTML中的一些语法&lt;/li&gt;
+&lt;li&gt;内嵌iframe页面，可以实现B站视频播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他扩展语法&#34;&gt;其他扩展语法
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;文本高亮，使用两个=等号包括&lt;/li&gt;
+&lt;li&gt;文本的上标和下标分别可以使用单个^和~包括来实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数学公式语法&#34;&gt;数学公式语法
+&lt;/h2&gt;&lt;h3 id=&#34;公式块&#34;&gt;公式块
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;需要编写数学公式，我们同样需要在特定的块中编写，公式块使用$美元符表示。多行公式使用连续的两个美元符&lt;/li&gt;
+&lt;li&gt;行内编写，一行内容只需要使用一个美元符包括即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;特殊数学符号&#34;&gt;特殊数学符号
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;代码&lt;/th&gt;
+          &lt;th&gt;符号&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;\not=&lt;/td&gt;
+          &lt;td&gt;≠&lt;/td&gt;
+          &lt;td&gt;不等于&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;\approx&lt;/td&gt;
+          &lt;td&gt;≈&lt;/td&gt;
+          &lt;td&gt;约等于&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;\times&lt;/td&gt;
+          &lt;td&gt;×&lt;/td&gt;
+          &lt;td&gt;乘号｜&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\div｜÷｜除号｜&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\leq｜≤｜小于等于｜&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\geq｜≥｜大于等于｜&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\pm｜±｜正负号｜&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\sum｜∑｜求和符号（累加）｜&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\prod｜∏｜累乘｜&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\coprod｜∐｜累除｜&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;｜\overline{a + b + c}｜&lt;/td&gt;
+          &lt;td&gt;平均值&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </description>
         </item>
         <item>
