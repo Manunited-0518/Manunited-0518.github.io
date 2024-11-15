@@ -2,25 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MUBlog</title>
-        <link>http://localhost:1313/</link>
+        <link>https://Manunited.github.io/</link>
         <description>Recent content on MUBlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Fri, 15 Nov 2024 16:35:17 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>网络安全</title>
-        <link>http://localhost:1313/posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
-        <pubDate>Fri, 15 Nov 2024 16:35:17 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 12 Nov 2024 20:43:19 +0800</lastBuildDate><atom:link href="https://Manunited.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Mark Down语法</title>
-        <link>http://localhost:1313/p/mark-down%E8%AF%AD%E6%B3%95/</link>
+        <link>https://Manunited.github.io/p/mark-down%E8%AF%AD%E6%B3%95/</link>
         <pubDate>Tue, 12 Nov 2024 20:43:19 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/mark-down%E8%AF%AD%E6%B3%95/</guid>
+        <guid>https://Manunited.github.io/p/mark-down%E8%AF%AD%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;markdown语法&#34;&gt;MarkDown语法
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。&lt;/p&gt;
@@ -448,27 +440,86 @@ $ \ldots $   靠底部的省略号&lt;/li&gt;
         </item>
         <item>
         <title>网络安全</title>
-        <link>http://localhost:1313/p/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+        <link>https://Manunited.github.io/p/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
         <pubDate>Tue, 12 Nov 2024 20:43:19 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+        <guid>https://Manunited.github.io/p/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
         <description>&lt;h1 id=&#34;简单的html语法&#34;&gt;简单的HTML语法
-&lt;/h1&gt;</description>
+&lt;/h1&gt;&lt;h2 id=&#34;1简单的-html-页面架构&#34;&gt;1.简单的 HTML 页面架构
+&lt;/h2&gt;&lt;p&gt;![picture](&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/manunited0518/image-store/raw/master/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gitee.com/manunited0518/image-store/raw/master/&lt;/a&gt;截屏2024-11-15 17.27.07.png)&lt;/p&gt;
+&lt;h2 id=&#34;2-html-常userssunjialeidesktop截屏2024-11-15-172707png见标签&#34;&gt;2. HTML 常/Users/sunjialei/Desktop/截屏2024-11-15 17.27.07.png见标签
+&lt;/h2&gt;&lt;h3 id=&#34;21-meta-标签&#34;&gt;2.1. meta 标签
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&amp;lt;meta&amp;gt; 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎 和更新频度的描述和关键词。 设置网站关键字 meta name=&amp;ldquo;keywords&amp;rdquo; content=&amp;ldquo;网络安全，WEB 渗透，数据安全，渗透测试， 安全培训&amp;rdquo; /&amp;gt; &lt;link&gt; 标签定义文档与外部资源的关系。 &lt;script&gt; 引入 js 文件 注释 &lt;!--这是一段注释。注释不会在浏览器中显示。--&gt; &lt;p&gt;这是一段普通的段落。&lt;/p&gt; 2.2. 标题标签 由大到小 &lt;h1&gt;h1&lt;/h1&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;暗月渗透测试培训 2021-2-25 &lt;h2&gt;h2&lt;/h2&gt; &lt;h3&gt;h3&lt;/h3&gt; &lt;h4&gt;h4&lt;/h4&gt; &lt;h5&gt;h5&lt;/h5&gt; &lt;h6&gt;6&lt;/h6&gt; &lt;/br&gt; 换行标签 &lt;hr&gt;换行线标签 2.3. 文本属性 &lt;strong&gt;加粗&lt;/strong&gt; &lt;b&gt;&lt;/b&gt;加粗 &lt;i&gt;&lt;/i&gt;斜体 &lt;u&gt;&lt;/u&gt; 下划线 &lt;sup&gt;&lt;/sup&gt;上标 &lt;sub&gt;&lt;/sub&gt;下标 &lt;del&gt;&lt;/del&gt; 删除线 &lt;font&gt;&lt;/font&gt; 规定字体属性 size 字体的大小 color 字体颜色 代码样式原样输出 &lt;pre&gt;&lt;/pre&gt; 2.4. form 表单 form 表单 规定当提交表单时向何处发送表单数据 method 提交的方法有 get、post 规定在发送表单数据之前如何对其进行编码。 enctype 属性可能的值 application/x-www-form-urlencoded multipart/form-data text/plain input 标签 name：同样是表示的该文本输入框名称。 size：输入框的长度大小。 maxlength：输入框中允许输入字符的最大数。 value：输入框中的默认值 readonly：表示该框中只能显示，不能添加修改。&lt;/p&gt;
+&lt;p&gt;暗月渗透测试培训
+2021-2-25
+input 的类型
+type=password 密码输入框
+type=file 文件上传
+type=hidden 隐藏域
+button 按钮
+checkbox 复选框
+radio 单选框
+type=submit 提交按钮
+type=reset 重置按钮
+2.5. a 标签、img 标签、table 标签
+a 标签的作用：就是用于控制界面与页面之间的跳转
+默认就是 self
+self：用于在当前选项卡中跳转，也就是不新建页面跳转
+_blank ：用于在新的选项卡中跳转，也就是新建页面跳转
+&lt;a href=&#34;http://www.baidu.com&#34; target=&#34;self&#34;&gt;百度&lt;/a&gt;
+&lt;a href=&#34;http://www.baidu.com&#34; target=&#34;_blank&#34;&gt;百度&lt;/a&gt;
+_blank 在新窗口中打开被链接文档。
+_self 默认。在相同的框架中打开被链接文档。
+_parent 在父框架集中打开被链接文档。
+_top 在整个窗口中打开被链接文档。
+2.6. 锚文本
+&lt;a href=&#34;#2&#34;&gt;锚点&lt;/a&gt;
+&lt;a name=&#34;2&#34;&gt;锚点&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;暗月渗透测试培训 2021-2-25 2.7. img 标签 img 元素向网页中嵌入一幅图像。 &lt;img src=&#34;../../../../../../../i/eg_tulip.jpg&#34; alt=&#34;上海鲜花港 - 郁金香&#34; /&gt; alt 规定图像的替代文本。 src 规定显示图像的 url width 规定图片的高度 height 规定图片的宽度 2.8. table 表格 &lt;caption&gt;我的标题&lt;/caption&gt;表格带标题 border 边框 width 宽度 height 高度 colspan 行 rowspan 竖 &lt;th&gt;&lt;/th&gt; &lt;tr&gt;行&lt;/tr&gt; &lt;td&gt;表格&lt;/td&gt; cellpadding 单元边与内容的空白 cellspacing 单元格的空白 2.9. 列表标签 &lt;ul&gt; &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt; &lt;/ul&gt; 2.9.1. 无序列表 项目符号 square circle disc &lt;ul&gt; &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt; &lt;/ul&gt; 2.9.2. 有序列表 数字列表 默认 数字&lt;/p&gt;
+&lt;p&gt;暗月渗透测试培训
+2021-2-25
+小写字母列表
+大写字母列表 A
+罗马字母列表 I
+小写罗马字母列表 i&lt;/p&gt;
+&lt;ol type=&#34;1&#34;&gt; &lt;!--有序列表--&gt;
+&lt;li&gt;暗月实战项目九 不出网的情况下的内网多域控渗透&lt;/li&gt;
+&lt;li&gt;xp/2003 开关 3389 指令&lt;/li&gt;
+&lt;li&gt;一条命令修改 windows 注册表&lt;/li&gt;
+&lt;/ol&gt;
+2.10. 框架的使用
+frameset 元素可定义一个框架集。它被用来组织多个窗口（框架）。每个框架存
+有独立的文档。在其最简单的应用中，frameset 元素仅仅会规定在框架集中存在
+多少列或多少行。您必须使用 cols 或 rows 属性。
+frameset 在一个页面中设置一个或多个框架 不能嵌套在 body 标签里
+iframe 是在 html 页面内嵌入框架 框架内可以连接另一个页面
+frameset 不能在 body 内使用
+frame 一般都是在 frameset 中使用
+cols 定义框架集中列的数目和尺寸
+rows 定义框架集中行的数目和尺寸
+scrolling 滚动条
+auto在需要的情况下出现滚动条（默认值）。
+yes 始终显示滚动条（即使不需要）。
+no 从不显示滚动条（即使需要）</description>
         </item>
         <item>
         <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>https://Manunited.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>https://Manunited.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title></title>
-        <link>http://localhost:1313/p/</link>
+        <link>https://Manunited.github.io/p/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/</guid>
+        <guid>https://Manunited.github.io/p/</guid>
         <description>&lt;p&gt;title=&amp;ldquo;Markdown语法&amp;rdquo;&lt;/p&gt;
 &lt;h1 id=&#34;什么是markdown语法&#34;&gt;什么是MarkDown语法？
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;
@@ -483,10 +534,10 @@ $ \ldots $   靠底部的省略号&lt;/li&gt;
         </item>
         <item>
         <title>Links</title>
-        <link>http://localhost:1313/links/</link>
+        <link>https://Manunited.github.io/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/links/</guid>
+        <guid>https://Manunited.github.io/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -518,18 +569,18 @@ $ \ldots $   靠底部的省略号&lt;/li&gt;
         </item>
         <item>
         <title>Search</title>
-        <link>http://localhost:1313/search/</link>
+        <link>https://Manunited.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>https://Manunited.github.io/search/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>http://localhost:1313/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://Manunited.github.io/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://Manunited.github.io/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
