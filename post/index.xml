@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on MUBlog</title>
-        <link>https://Manunited.github.io/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on MUBlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 12 Nov 2024 20:43:19 +0800</lastBuildDate><atom:link href="https://Manunited.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 12 Nov 2024 20:43:19 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Mark Down语法</title>
-        <link>https://Manunited.github.io/p/mark-down%E8%AF%AD%E6%B3%95/</link>
+        <link>http://localhost:1313/p/mark-down%E8%AF%AD%E6%B3%95/</link>
         <pubDate>Tue, 12 Nov 2024 20:43:19 +0800</pubDate>
         
-        <guid>https://Manunited.github.io/p/mark-down%E8%AF%AD%E6%B3%95/</guid>
+        <guid>http://localhost:1313/p/mark-down%E8%AF%AD%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;markdown语法&#34;&gt;MarkDown语法
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。&lt;/p&gt;
@@ -439,11 +439,19 @@ $ \ldots $   靠底部的省略号&lt;/li&gt;
 </description>
         </item>
         <item>
+        <title>网络安全</title>
+        <link>http://localhost:1313/p/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+        <pubDate>Tue, 12 Nov 2024 20:43:19 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+        <description></description>
+        </item>
+        <item>
         <title></title>
-        <link>https://Manunited.github.io/p/</link>
+        <link>http://localhost:1313/p/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Manunited.github.io/p/</guid>
+        <guid>http://localhost:1313/p/</guid>
         <description>&lt;p&gt;title=&amp;ldquo;Markdown语法&amp;rdquo;&lt;/p&gt;
 &lt;h1 id=&#34;什么是markdown语法&#34;&gt;什么是MarkDown语法？
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;
