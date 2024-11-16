@@ -457,9 +457,50 @@ $ \ldots $   靠底部的省略号&lt;/li&gt;
 &lt;h2 id=&#34;2-html-常见标签&#34;&gt;2. HTML 常见标签
 &lt;/h2&gt;&lt;h3 id=&#34;21-meta-标签&#34;&gt;2.1. meta 标签
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&amp;lt;meta&amp;gt; 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎 和更新频度的描述和关键词。 设置网站关键字 meta name=&amp;ldquo;keywords&amp;rdquo; content=&amp;ldquo;网络安全，WEB 渗透，数据安全，渗透测试， 安全培训&amp;rdquo; /&amp;gt; &lt;link&gt; 标签定义文档与外部资源的关系。 &lt;script&gt; 引入 js 文件 注释 &lt;!--这是一段注释。注释不会在浏览器中显示。--&gt; &lt;p&gt;这是一段普通的段落。&lt;/p&gt; 2.2. 标题标签 由大到小 &lt;h1&gt;h1&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;meta&amp;gt; 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎 和更新频度的描述和关键词。&lt;/li&gt;
+&lt;li&gt;设置网站关键字 meta  name=&amp;ldquo;keywords&amp;rdquo; content=&amp;ldquo;网络安全，WEB 渗透，数据安全，渗透测试， 安全培训&amp;rdquo; /&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;link&amp;gt; 标签定义文档与外部资源的关系。&lt;/li&gt;
+&lt;li&gt;\ &lt;script&gt; 引入 js 文件&lt;/li&gt;
+&lt;li&gt;注释 :&lt;!--这是一段注释。注释不会在浏览器中显示。--&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这是一段普通的段落。&lt;/p&gt; 
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;暗月渗透测试培训 2021-2-25 &lt;h2&gt;h2&lt;/h2&gt; &lt;h3&gt;h3&lt;/h3&gt; &lt;h4&gt;h4&lt;/h4&gt; &lt;h5&gt;h5&lt;/h5&gt; &lt;h6&gt;6&lt;/h6&gt; &lt;/br&gt; 换行标签 &lt;hr&gt;换行线标签 2.3. 文本属性 &lt;strong&gt;加粗&lt;/strong&gt; &lt;b&gt;&lt;/b&gt;加粗 &lt;i&gt;&lt;/i&gt;斜体 &lt;u&gt;&lt;/u&gt; 下划线 &lt;sup&gt;&lt;/sup&gt;上标 &lt;sub&gt;&lt;/sub&gt;下标 &lt;del&gt;&lt;/del&gt; 删除线 &lt;font&gt;&lt;/font&gt; 规定字体属性 size 字体的大小 color 字体颜色 代码样式原样输出 &lt;pre&gt;&lt;/pre&gt; 2.4. form 表单 form 表单 规定当提交表单时向何处发送表单数据 method 提交的方法有 get、post 规定在发送表单数据之前如何对其进行编码。 enctype 属性可能的值 application/x-www-form-urlencoded multipart/form-data text/plain input 标签 name：同样是表示的该文本输入框名称。 size：输入框的长度大小。 maxlength：输入框中允许输入字符的最大数。 value：输入框中的默认值 readonly：表示该框中只能显示，不能添加修改。&lt;/p&gt;
+&lt;h3 id=&#34;22-标题标签-由大到小&#34;&gt;2.2. 标题标签 由大到小
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;原代码：
+&amp;lt;h1&amp;gt;h1&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;h2&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;h3&amp;lt;/h3&amp;gt;
+&amp;lt;h4&amp;gt;h4&amp;lt;/h4&amp;gt;
+&amp;lt;h5&amp;gt;h5&amp;lt;/h5&amp;gt;
+&amp;lt;h6&amp;gt;6&amp;lt;/h6&amp;gt;&lt;/li&gt;
+&lt;li&gt;实际效果：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;h1&lt;/h1&gt;
+&lt;h2&gt;h2&lt;/h2&gt;
+&lt;h3&gt;h3&lt;/h3&gt;
+&lt;h4&gt;h4&lt;/h4&gt;
+&lt;h5&gt;h5&lt;/h5&gt; 
+&lt;h6&gt;h6&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;换行线标签
+&amp;lt;/br&amp;gt; 换行标签 &amp;lt;hr&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;23-文本属性&#34;&gt;2.3. 文本属性
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&amp;lt;strong&amp;gt;加粗&amp;lt;/strong&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;加粗&lt;/li&gt;
+&lt;li&gt;&amp;lt;i&amp;gt;&amp;lt;/i&amp;gt;斜体&lt;/li&gt;
+&lt;li&gt;&amp;lt;u&amp;gt;&amp;lt;/u&amp;gt;下划线&lt;/li&gt;
+&lt;li&gt;&amp;lt;sup&amp;gt;&amp;lt;/sup&amp;gt;上标&lt;/li&gt;
+&lt;li&gt;&amp;lt;sub&amp;gt;&amp;lt;/sub&amp;gt;下标&lt;/li&gt;
+&lt;li&gt;&amp;lt;del&amp;gt;&amp;lt;/del&amp;gt; 删除线&lt;/li&gt;
+&lt;li&gt;&amp;lt;font&amp;gt;&amp;lt;/font&amp;gt; 规定字体属性:size 字体的大小 color 字体颜色&lt;/li&gt;
+&lt;li&gt;代码样式原样输出&amp;lt;pre&amp;gt;&amp;lt;/pre&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;24-form-表单&#34;&gt;2.4. form 表单
+&lt;/h3&gt;&lt;p&gt;form 表单 规定当提交表单时向何处发送表单数据 method 提交的方法有 get、post 规定在发送表单数据之前如何对其进行编码。 enctype 属性可能的值 application/x-www-form-urlencoded multipart/form-data text/plain input 标签 name：同样是表示的该文本输入框名称。 size：输入框的长度大小。 maxlength：输入框中允许输入字符的最大数。 value：输入框中的默认值 readonly：表示该框中只能显示，不能添加修改。&lt;/p&gt;
 &lt;p&gt;暗月渗透测试培训
 2021-2-25
 input 的类型
