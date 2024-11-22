@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="数据结构基本概念 数据 数据是信息的载体，是描述客观事物属性的数、字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。数据是计算机程序加工的原料。 数据元素、数据项 数据元素是数据的基本单位，通常作为一个整体进行考虑和处理。 一个数据元素可由若干数据项组成，数据项是构成数据元素的不可分割的最小单位。 数据结构、数据对象： 数据结构是相互之间存在一种或多种特定关系的数据元素的集合。 数据对象是具有相同性质的数据元素的集合，是数据的一个子集。 数据结构的三要素 逻辑结构，物理结构（存储结构），数据的运算。 逻辑结构 集合：各个元素同属一个集合，别无其他关系 线性结构：数据元素之间是一对一的关系。除了第一个元素，所有元素都有唯一前驱；除了最后一个元素，所有元素都有唯一后继 树形结构：数据元素之间是一对多的关系 图结构：数据元素之间是多对多的关系 物理结构（存储结构） 顺序存储：把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储 单元的邻接关系来体现。 链式存储：逻辑上相邻的元素在物理位置上可以不相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。 索引存储：在存储元素信息的同时，还建立附加的索引表。索引表中的每项称为索引项，索引项的一般形式是（关键字，地址） 散列存储。根据元素的关键字直接计算出该元素的存储地址，又称哈希（Hash）存储 其中，链式存储、索引存储、散列存储也并称为非顺序存储\n以下几点需要注意 若采用顺序存储，则各个数据元素在物理上必须是连续的；若采用 非顺序存储，则各个数据元素在物理上可以是离散的。 数据的存储结构会影响存储空间分配的方便程度 数据的存储结构会影响对数据运算的速度 数据的运算 施加在数据上的运算包括运算的定义和实现。运算的定义是针对逻辑结构的， 指出运算的功能；运算的实现是针对存储结构的，指出运算的具体操作步骤。\n数据类型、抽象数据类型 数据类型是一个值的集合和定义在此集合上的一组操作的总称。 1）原子类型。其值不可再分的数据类型。 2）结构类型。其值可以再分解为若干成分（分量）的数据类型。 抽象数据类型（Abstract Data Type，ADT）是抽象数据组织及与之相关的操作。\nADT 用数学化的语言定义数据的逻辑结构、定义运算。与具体的实现无关。 算法的基本概念 什么是算法 程序 = 数据结构（如何用数据正确地描述现实世界的问题，并存入计算机） + 算法（如何高效地处理这些数据，以解决实际问题） 算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中的每条指令 表示一个或多个操作 算法的特性 有穷性。一个算法必须总在执行有穷步之后结束，且每一步都可在有穷时间内完成。用有限步骤解决某个特定的问题 注：算法必须是有穷的，而程序可以是无穷的 确定性。算法中每条指令必须有确切的含义，对于相同的输入只能得出相同的输出。 “好”算法的特性 设计算法时尽量遵循的目标\n正确性。算法应能够正确地解决求解问题。 可读性。算法应具有良好的可读性，以帮助人们理解。 健壮性。输入非法数据时，算法能适当地做出反应或进行处理，而不会产生莫名其妙的输出结果。 高效率与低存储量需求 算法效率的度量 如何评估算法时间开销 算法时间复杂度： 事前预估算法时间开销T(n)与问题规模 n 的关系（T 表示 “time”） 例子：用算法表白——“爱你n遍” 1 2 3 4 5 6 7 8 void loveyou(int n){ ①int i; ②while(i&lt;=n){ ③i++; ④cout&lt;&lt;&#34;I Love You %d&#34;&lt;&lt;endl; } ⑤cout&lt;&lt;&#34;I Love You More Than %d&#34;&lt;&lt;endl; } 语句频度： ① ——1次 ② ——3001次 ③④ ——3000次 ⑤ ——1次 T(3000) = 1 + 3001 + 2*3000 + 1 时间开销与问题规模 n 的关系： T(n)=3n+3\n">
 <title>数据结构</title>
 
-<link rel='canonical' href='http://localhost:1313/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
+<link rel='canonical' href='https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="数据结构">
 <meta property='og:description' content="数据结构基本概念 数据 数据是信息的载体，是描述客观事物属性的数、字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。数据是计算机程序加工的原料。 数据元素、数据项 数据元素是数据的基本单位，通常作为一个整体进行考虑和处理。 一个数据元素可由若干数据项组成，数据项是构成数据元素的不可分割的最小单位。 数据结构、数据对象： 数据结构是相互之间存在一种或多种特定关系的数据元素的集合。 数据对象是具有相同性质的数据元素的集合，是数据的一个子集。 数据结构的三要素 逻辑结构，物理结构（存储结构），数据的运算。 逻辑结构 集合：各个元素同属一个集合，别无其他关系 线性结构：数据元素之间是一对一的关系。除了第一个元素，所有元素都有唯一前驱；除了最后一个元素，所有元素都有唯一后继 树形结构：数据元素之间是一对多的关系 图结构：数据元素之间是多对多的关系 物理结构（存储结构） 顺序存储：把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储 单元的邻接关系来体现。 链式存储：逻辑上相邻的元素在物理位置上可以不相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。 索引存储：在存储元素信息的同时，还建立附加的索引表。索引表中的每项称为索引项，索引项的一般形式是（关键字，地址） 散列存储。根据元素的关键字直接计算出该元素的存储地址，又称哈希（Hash）存储 其中，链式存储、索引存储、散列存储也并称为非顺序存储\n以下几点需要注意 若采用顺序存储，则各个数据元素在物理上必须是连续的；若采用 非顺序存储，则各个数据元素在物理上可以是离散的。 数据的存储结构会影响存储空间分配的方便程度 数据的存储结构会影响对数据运算的速度 数据的运算 施加在数据上的运算包括运算的定义和实现。运算的定义是针对逻辑结构的， 指出运算的功能；运算的实现是针对存储结构的，指出运算的具体操作步骤。\n数据类型、抽象数据类型 数据类型是一个值的集合和定义在此集合上的一组操作的总称。 1）原子类型。其值不可再分的数据类型。 2）结构类型。其值可以再分解为若干成分（分量）的数据类型。 抽象数据类型（Abstract Data Type，ADT）是抽象数据组织及与之相关的操作。\nADT 用数学化的语言定义数据的逻辑结构、定义运算。与具体的实现无关。 算法的基本概念 什么是算法 程序 = 数据结构（如何用数据正确地描述现实世界的问题，并存入计算机） + 算法（如何高效地处理这些数据，以解决实际问题） 算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中的每条指令 表示一个或多个操作 算法的特性 有穷性。一个算法必须总在执行有穷步之后结束，且每一步都可在有穷时间内完成。用有限步骤解决某个特定的问题 注：算法必须是有穷的，而程序可以是无穷的 确定性。算法中每条指令必须有确切的含义，对于相同的输入只能得出相同的输出。 “好”算法的特性 设计算法时尽量遵循的目标\n正确性。算法应能够正确地解决求解问题。 可读性。算法应具有良好的可读性，以帮助人们理解。 健壮性。输入非法数据时，算法能适当地做出反应或进行处理，而不会产生莫名其妙的输出结果。 高效率与低存储量需求 算法效率的度量 如何评估算法时间开销 算法时间复杂度： 事前预估算法时间开销T(n)与问题规模 n 的关系（T 表示 “time”） 例子：用算法表白——“爱你n遍” 1 2 3 4 5 6 7 8 void loveyou(int n){ ①int i; ②while(i&lt;=n){ ③i++; ④cout&lt;&lt;&#34;I Love You %d&#34;&lt;&lt;endl; } ⑤cout&lt;&lt;&#34;I Love You More Than %d&#34;&lt;&lt;endl; } 语句频度： ① ——1次 ② ——3001次 ③④ ——3000次 ⑤ ——1次 T(3000) = 1 + 3001 + 2*3000 + 1 时间开销与问题规模 n 的关系： T(n)=3n+3\n">
-<meta property='og:url' content='http://localhost:1313/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
+<meta property='og:url' content='https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
 <meta property='og:site_name' content='MUBlog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-12T20:43:19&#43;08:00'/><meta property='article:modified_time' content='2024-11-12T20:43:19&#43;08:00'/>
 <meta name="twitter:title" content="数据结构">
@@ -233,11 +233,11 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="http://localhost:1313/en/" >English</option>
+                                    <option value="https://Manunited.github.io/en/" >English</option>
                                 
-                                    <option value="http://localhost:1313/" selected>中文</option>
+                                    <option value="https://Manunited.github.io/" selected>中文</option>
                                 
-                                    <option value="http://localhost:1313/ar/" >عربي</option>
+                                    <option value="https://Manunited.github.io/ar/" >عربي</option>
                                 
                             </select>
                         </li>
@@ -443,6 +443,49 @@
       </ol>
     </li>
   </ol>
+
+  <ol>
+    <li><a href="#栈的基本概念">栈的基本概念</a>
+      <ol>
+        <li><a href="#栈的基本操作">栈的基本操作</a></li>
+        <li><a href="#常见问题栈的进出栈问题">常见问题：栈的进出栈问题</a></li>
+      </ol>
+    </li>
+    <li><a href="#顺序栈的实现">顺序栈的实现</a>
+      <ol>
+        <li><a href="#顺序栈的定义">顺序栈的定义</a></li>
+        <li><a href="#初始化操作">初始化操作</a></li>
+        <li><a href="#判空操作">判空操作</a></li>
+        <li><a href="#进栈操作">进栈操作</a></li>
+        <li><a href="#出栈操作">出栈操作</a></li>
+        <li><a href="#读栈顶元素">读栈顶元素</a></li>
+        <li><a href="#另一种方式">另一种方式</a></li>
+        <li><a href="#共享栈">共享栈</a></li>
+      </ol>
+    </li>
+    <li><a href="#链栈的实现">链栈的实现</a>
+      <ol>
+        <li><a href="#链栈的定义">链栈的定义</a></li>
+      </ol>
+    </li>
+    <li><a href="#队列的基本概念">队列的基本概念</a>
+      <ol>
+        <li><a href="#队列的定义">队列的定义</a></li>
+        <li><a href="#队列的基本操作">队列的基本操作</a></li>
+      </ol>
+    </li>
+    <li><a href="#队列的顺序实现">队列的顺序实现</a>
+      <ol>
+        <li><a href="#顺序队列的定义">顺序队列的定义</a></li>
+        <li><a href="#初始化操作-1">初始化操作</a></li>
+        <li><a href="#判空操作-1">判空操作</a></li>
+        <li><a href="#入队操作">入队操作</a></li>
+        <li><a href="#判空操作-2">判空操作</a></li>
+        <li><a href="#出队操作">出队操作</a></li>
+        <li><a href="#获得对头元素的值用x的值">获得对头元素的值，用x的值</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
         </div>
     </section>
@@ -498,7 +541,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 8 分钟
+                    阅读时长: 10 分钟
                 </time>
             </div>
         
@@ -672,24 +715,28 @@ a1 a2 a3 a4 a5
 </ul>
 <h3 id="基本操作">基本操作
 </h3><ul>
-<li>InitList(&amp;L):初始化表。构造一个空的线性表L，分配内存空间。
-DestroyList(&amp;L)：销毁操作。销毁线性表，并释放线性表L所占用的内存空间。
-ListInsert(&amp;L,i,e)：插入操作。在表L中的第i个位置上插入指定元素e。
-ListDelete(&amp;L,i,&amp;e)：删除操作。删除表L中第i个位置的元素，并用e返回删除元素的值。
-LocateElem(L,e)：按值查找操作。在表L中查找具有给定关键字值的元素。
-GetElem(L,i)：按位查找操作。获取表L中第i个位置的元素的值。
-其他常用操作：
-Length(L)：求表长。返回线性表L的长度，即L中数据元素的个数。
-PrintList(L)：输出操作。按前后顺序输出线性表L的所有元素值。
-Empty(L)：判空操作。若L为空表，则返回true，否则返回false。
-Key：命名要有可读性
-Tips：
+<li>
+<p>InitList(&amp;L):初始化表。构造一个空的线性表L，分配内存空间。</p>
+<p>DestroyList(&amp;L)：销毁操作。销毁线性表，并释放线性表L所占用的内存空间。</p>
+<p>ListInsert(&amp;L,i,e)：插入操作。在表L中的第i个位置上插入指定元素e。</p>
+<p>ListDelete(&amp;L,i,&amp;e)：删除操作。删除表L中第i个位置的元素，并用e返回删除元素的值。</p>
+<p>LocateElem(L,e)：按值查找操作。在表L中查找具有给定关键字值的元素。</p>
+<p>GetElem(L,i)：按位查找操作。获取表L中第i个位置的元素的值。</p>
+<p>其他常用操作：</p>
+<p>Length(L)：求表长。返回线性表L的长度，即L中数据元素的个数。</p>
+<p>PrintList(L)：输出操作。按前后顺序输出线性表L的所有元素值。</p>
+<p>Empty(L)：判空操作。若L为空表，则返回true，否则返回false。</p>
+<p>Key：命名要有可读性</p>
+</li>
+</ul>
+<blockquote>
+<p>Tips：
 ①对数据的操作（记忆思路） —— 创销、增删改查
 ②C语言函数的定义 —— &lt;返回值类型&gt; 函数名 (&lt;参数1类型&gt; 参数1，&lt;参数2类型&gt; 参数2，&hellip;&hellip;)
 ③实际开发中，可根据实际需求定义其他的基本操作
 ④函数名和参数的形式、命名都可改变（Reference：严蔚敏版《数据结构》）
-⑤什么时候要传入引用“&amp;” —— 对参数的修改结果需要“带回来”</li>
-</ul>
+⑤什么时候要传入引用“&amp;” —— 对参数的修改结果需要“带回来”</p>
+</blockquote>
 <h2 id="顺序表的定义">顺序表的定义
 </h2><p>线性表是具有相同数据类型的n（n≥0）个数据元素的有限序列。</p>
 <ul>
@@ -1965,7 +2012,350 @@ typedef &lt;数据类型&gt; &lt;别名&gt;</li>
 5.按位查找：O(n)
 6.按值查找：O(n）</li>
 </ul>
-
+<h1 id="栈队列和数组">栈、队列和数组
+</h1><h2 id="栈的基本概念">栈的基本概念
+</h2><ul>
+<li>线性表是具有相同数据类型的n（n≥0）个数据元素的有限 序列，其中n为表长，当n = 0时线
+性表是一个空表。若用L命名线性表，则其一般表示为
+L = (a1, a2, &hellip; , ai, ai+1, &hellip; , an)</li>
+<li>栈（Stack）是只允许在一端进行插入或删除操作的线性表</li>
+</ul>
+<h3 id="栈的基本操作">栈的基本操作
+</h3><p>InitStack(&amp;S)：初始化栈。构造一个空栈 S，分配内存空间。</p>
+<p>DestroyStack(&amp;S)：销毁栈。销毁并释放栈 S 所占用的内存空间。</p>
+<p>Push(&amp;S,x)：进栈，若栈S未满，则将x加入使之成为新栈顶。</p>
+<p>Pop(&amp;S,&amp;x)：出栈，若栈S非空，则弹出栈顶元素，并用x返回。</p>
+<p>GetTop(S, &amp;x)：读栈顶元素。若栈 S 非空，则用 x 返回栈顶元素</p>
+<p>其他常用操作：</p>
+<p>StackEmpty(S)：判断一个栈 S 是否为空。若S为空，则返回true，否则返回false。</p>
+<h3 id="常见问题栈的进出栈问题">常见问题：栈的进出栈问题
+</h3><p>进栈顺序：
+a-&gt;b-&gt;c-&gt;d-&gt;e
+有哪些合法的出栈顺序？
+n个不同元素进栈，出栈元素不同排列的个数为1/n+1C<sub>2n</sub><sup>n</sup></p>
+<p>上述公式称为卡特兰（Catalan）数，可采用数学归纳法证明（不要求掌握）。</p>
+<h2 id="顺序栈的实现">顺序栈的实现
+</h2><h3 id="顺序栈的定义">顺序栈的定义
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#define MaxSize 10
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">[</span><span class="n">MaxSize</span><span class="p">];</span><span class="c1">//静态数组中存放栈中元素
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">top</span><span class="p">;</span><span class="c1">//栈顶指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="n">SqStack</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="初始化操作">初始化操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">InitStack</span><span class="p">(</span><span class="n">SqStack</span> <span class="o">&amp;</span><span class="n">S</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="判空操作">判空操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">StackEmpty</span><span class="p">(</span><span class="n">SqStack</span> <span class="n">S</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">top</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="进栈操作">进栈操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">Push</span><span class="p">(</span><span class="n">SqStack</span> <span class="o">&amp;</span><span class="n">S</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="o">==</span><span class="n">MaxSize</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span><span class="c1">//栈满，操作失败
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//这两步可以直接写为S.data[++S.top]=x
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="出栈操作">出栈操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">pop</span><span class="p">(</span><span class="n">SqStack</span> <span class="o">&amp;</span><span class="n">S</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span><span class="c1">//栈空，报错
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">x</span><span class="o">=</span><span class="n">S</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="o">-=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//这两步可以直接写为x=S.data[S.top--]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="读栈顶元素">读栈顶元素
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">GetTop</span><span class="p">(</span><span class="n">SqStack</span> <span class="o">&amp;</span><span class="n">S</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="n">S</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">S</span><span class="p">.</span><span class="n">top</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="另一种方式">另一种方式
+</h3><p>另一种方式就是把S.top的初始值设为0，其他地方一致</p>
+<h3 id="共享栈">共享栈
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#define MaxSize 10
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">[</span><span class="n">MaxSize</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">top0</span><span class="p">;</span><span class="c1">//0号栈栈顶指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">top1</span><span class="p">;</span><span class="c1">//1号栈栈顶指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="n">ShStack</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>初始化栈</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">InitStack</span><span class="p">(</span><span class="n">SqStack</span> <span class="o">&amp;</span><span class="n">S</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="p">.</span><span class="n">top0</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="p">.</span><span class="n">top1</span><span class="o">=</span><span class="n">MaxSize</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意！栈满的条件：top0 + 1 == top1</p>
+<h2 id="链栈的实现">链栈的实现
+</h2><h3 id="链栈的定义">链栈的定义
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="nc">LinkNode</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">;</span><span class="c1">//数据域
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">struct</span> <span class="nc">LinkNode</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="c1">//指针域
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="o">*</span><span class="n">LiStack</span><span class="p">;</span><span class="c1">//栈类型定义
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>进栈/出栈都只能在栈顶一端进行（链头作为栈顶）</p>
+<h2 id="队列的基本概念">队列的基本概念
+</h2><h3 id="队列的定义">队列的定义
+</h3><ul>
+<li>队列（Queue）是只允许在一端进行插入，在另一端删除的线性表</li>
+<li>队列的特点：先进先出
+First In First Out（FIFO）</li>
+<li>队头：允许删除的一端</li>
+<li>队尾：允许插入的一端</li>
+</ul>
+<h3 id="队列的基本操作">队列的基本操作
+</h3><p>InitQueue(&amp;Q)：初始化队列，构造一个空队列Q。</p>
+<p>DestroyQueue(&amp;Q)：销毁队列。销毁并释放队列Q所占用的内存空间。</p>
+<p>EnQueue(&amp;Q,x)：入队，若队列Q未满，将x加入，使之成为新的队尾。</p>
+<p>DeQueue(&amp;Q,&amp;x)：出队，若队列Q非空，删除队头元素，并用x返回。</p>
+<p>GetHead(Q,&amp;x)：读队头元素，若队列Q非空，则将队头元素赋值给x。</p>
+<p>其他常用操作：</p>
+<p>QueueEmpty(Q)：判队列空，若队列Q为空返回true，否则返回false。</p>
+<h2 id="队列的顺序实现">队列的顺序实现
+</h2><h3 id="顺序队列的定义">顺序队列的定义
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#define MaxSize 10
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElemType</span> <span class="n">data</span><span class="p">[</span><span class="n">MaxSzie</span><span class="p">];</span><span class="c1">//用静态数组存放队列元素
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">front</span><span class="p">,</span><span class="n">rear</span><span class="p">;</span><span class="c1">//队头指针和队尾指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="n">SqQueue</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：rear指向队尾元素的后一个位置（下一个应该插入的位置）</p>
+<h3 id="初始化操作-1">初始化操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">InitQueue</span><span class="p">(</span><span class="n">SqQueue</span> <span class="o">&amp;</span><span class="n">Q</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="o">=</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="判空操作-1">判空操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">QueueEmpty</span><span class="p">(</span><span class="n">SqQueue</span> <span class="o">&amp;</span><span class="n">Q</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">==</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="入队操作">入队操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">EnQueue</span><span class="p">(</span><span class="n">SqQueue</span> <span class="o">&amp;</span><span class="n">Q</span><span class="p">,</span><span class="n">ElemType</span> <span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">((</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">MaxSize</span><span class="o">==</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">=</span><span class="p">(</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">MaxSize</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>队列已满的条件：队尾指针的再下一个位置是队头，即
+(Q.rear+1)%MaxSize==Q.front</p>
+<h3 id="判空操作-2">判空操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">QueueEmpty</span><span class="p">(</span><span class="n">SqQueue</span> <span class="n">Q</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">==</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="出队操作">出队操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">DeQueue</span><span class="p">(</span><span class="n">SqQueue</span> <span class="o">&amp;</span><span class="n">Q</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">==</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="n">Q</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="o">=</span><span class="p">(</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="n">MaxSize</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获得对头元素的值用x的值">获得对头元素的值，用x的值
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">GetHead</span><span class="p">(</span><span class="n">SqQueue</span> <span class="n">Q</span><span class="p">,</span><span class="n">ElemType</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">Q</span><span class="p">.</span><span class="n">rear</span><span class="o">==</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="n">Q</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -2167,7 +2557,7 @@ typedef &lt;数据类型&gt; &lt;别名&gt;</li>
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.792827e77d7f8370f67128f7b2627308cd0fc0f904cb68599da42be10947a225.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
