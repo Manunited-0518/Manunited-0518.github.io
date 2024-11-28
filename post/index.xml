@@ -444,14 +444,301 @@ $ \ldots $   靠底部的省略号&lt;/li&gt;
         <pubDate>Tue, 12 Nov 2024 20:43:19 +0800</pubDate>
         
         <guid>https://Manunited.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
-        <description></description>
+        <description>&lt;h1 id=&#34;计算机发展历程&#34;&gt;计算机发展历程
+&lt;/h1&gt;&lt;h2 id=&#34;什么计算机系统&#34;&gt;什么计算机系统
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;计算机系统=硬件+软件
+硬件：计算机的实体，如主机、外设等
+软件：由具有各类特殊作用的程序组成&lt;/li&gt;
+&lt;li&gt;计算机性能的好坏取决于“软”、“硬”件功能的总和&lt;/li&gt;
+&lt;li&gt;软件可以分为系统软件和应用软件
+系统软件：用来管理整个计算机系统&amp;mdash;如操作系统、数据库管理系统（DBMS）、标准程序库、网络软件、语言处理程序、服务程序
+应用软件：微信、哔哩哔哩等&amp;hellip; &amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;硬件的发展&#34;&gt;硬件的发展
+&lt;/h2&gt;&lt;h3 id=&#34;第一台计算机&#34;&gt;第一台计算机
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;台电子数字计算机：ENIAC(1946)
+占地面积约170平方米
+耗电量150千瓦
+运算速度：5000次加法/秒
+逻辑元件：电子管&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;四代计算机&#34;&gt;四代计算机
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;发展阶段&lt;/th&gt;
+          &lt;th&gt;时间&lt;/th&gt;
+          &lt;th&gt;逻辑元件&lt;/th&gt;
+          &lt;th&gt;速度(次/秒)&lt;/th&gt;
+          &lt;th&gt;内存&lt;/th&gt;
+          &lt;th&gt;外存&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;第一代&lt;/td&gt;
+          &lt;td&gt;1946-1957&lt;/td&gt;
+          &lt;td&gt;电子管&lt;/td&gt;
+          &lt;td&gt;几千-几万&lt;/td&gt;
+          &lt;td&gt;汞延迟线、磁鼓&lt;/td&gt;
+          &lt;td&gt;穿孔卡片、纸带&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;第二代&lt;/td&gt;
+          &lt;td&gt;1958-1964 晶体管&lt;/td&gt;
+          &lt;td&gt;几万-几十万&lt;/td&gt;
+          &lt;td&gt;磁芯存储器&lt;/td&gt;
+          &lt;td&gt;磁带&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;第三代&lt;/td&gt;
+          &lt;td&gt;1964-1971&lt;/td&gt;
+          &lt;td&gt;中小规模集成&lt;/td&gt;
+          &lt;td&gt;电路&lt;/td&gt;
+          &lt;td&gt;几十万-几百万&lt;/td&gt;
+          &lt;td&gt;半导体存储器&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;第四代&lt;/td&gt;
+          &lt;td&gt;1972-现在&lt;/td&gt;
+          &lt;td&gt;大规模、超大 规模集成电路&lt;/td&gt;
+          &lt;td&gt;上千万-万亿&lt;/td&gt;
+          &lt;td&gt;半导体存储器&lt;/td&gt;
+          &lt;td&gt;磁盘、磁带、光盘、半导体存储器&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;各代计算机特点&#34;&gt;各代计算机特点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;第一代：电子管时代体积超大、耗电量超大
+使用机器语言编程
+逻辑元件：电子管&lt;/li&gt;
+&lt;li&gt;第二代：晶体管时代
+体积、功耗降低
+出现面向过程的程序设计语言：FORTRAN
+有了操作系统雏形
+逻辑元件：晶体管&lt;/li&gt;
+&lt;li&gt;第三代：中小规模集成电路时代
+计算机主要用于科学计算等专业用途
+高级语言迅速发展
+开始有了分时操作系统
+将元件集成在基片上&lt;/li&gt;
+&lt;li&gt;第四代：大规模、超大规模集成电路时代
+开始出现“微处理器”、微型计算机个人计算机（PC）萌芽
+操作系统：Windows、MacOS、Linux
+Eg：苹果A13制造工艺：7nm
+（每个元件宽度7nm）
+拥有85亿个晶体管&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;微处理器的发展&#34;&gt;微处理器的发展
+&lt;/h2&gt;&lt;p&gt;微处理器的发展：微型计算机的发展以微处理器技术为标志
+机器字长：计算机一次整数运算所能处理的二进制位数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1947年，贝尔实验室，发明了“晶体管〞&lt;/li&gt;
+&lt;li&gt;1955年，肖克利在硅谷创建 肖克利实验室股份有限公司&lt;/li&gt;
+&lt;li&gt;1957年，八叛徒（traitorous eight）创立 仙童半导体公司&lt;/li&gt;
+&lt;li&gt;1959年，仙童半导体公司发明“集成电路“&lt;/li&gt;
+&lt;li&gt;1968年，摩尔等人离开仙童，创立 Intel&lt;/li&gt;
+&lt;li&gt;1969年，仙童销售部负责人桑德斯离开仙童，创立 AMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;摩尔定律&#34;&gt;摩尔定律
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;摩尔定律揭示了信息技术进步的速度
+集成电路上可容纳的晶体管数目，约每隔18个月便会增加一倍，整体性能也将提升一倍&lt;/li&gt;
+&lt;li&gt;半导体存储器的发展
+1970年，仙童公司生产出第一个较大容量的半导体存储器
+半导体存储器单芯片容量：1KB、4KB、16KB、64KB、256KB、1MB、4MB、16MB、64MB、
+256MB, 1GB&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;计算机硬件的基本组成&#34;&gt;计算机硬件的基本组成
+&lt;/h2&gt;&lt;h3 id=&#34;早期冯诺依曼机&#34;&gt;早期冯诺依曼机
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;“存储程序”
+“存储程序”的概念是指将指令以二进制代码的形式事先输入计算机的主存储器，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。&lt;/li&gt;
+&lt;li&gt;冯诺伊曼计算机的基本逻辑（注意流程图）
+输入设备：将信息转换成机器能识别的形式
+存储器：存放数据和程序
+运算器：算术运算逻辑运算
+输出设备：将结果转换成人们熟悉的形式
+控制器：指挥程序运行&lt;/li&gt;
+&lt;li&gt;在计算机系统中，软件和硬件在逻辑上是等效的。
+Eg：对于乘法运算，可以设计一个专门的硬件电路实现乘法运算也可以用软件的方式，执行多次加法运算来实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;冯•诺依曼计算机的特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算机由五大部件组成&lt;/li&gt;
+&lt;li&gt;指令和数据以同等地位存于存储器，可按地址寻访&lt;/li&gt;
+&lt;li&gt;指令和数据用二进制表示&lt;/li&gt;
+&lt;li&gt;指令由操作码和地址码组成&lt;/li&gt;
+&lt;li&gt;存储程序&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;以运算器为中心&lt;/strong&gt;（输入/输出设备与存储器之间的数据传送通过运算器完成）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;现代计算机的结构&#34;&gt;现代计算机的结构
+&lt;/h3&gt;&lt;p&gt;现代计算机：&lt;strong&gt;以存储器为中心&lt;/strong&gt;
+CPU=运算器+控制器
+存储器=主存+辅存
+主机=主存+CPU
+I/O设备=辅存+输入设备+输出设备
+硬件=主机+I/O设备&lt;/p&gt;
+&lt;h2 id=&#34;各个硬件的工作原理&#34;&gt;各个硬件的工作原理
+&lt;/h2&gt;&lt;h3 id=&#34;主存储器的基本组成&#34;&gt;主存储器的基本组成
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;主存储器=存储体+MAR+MDR
+Memory Address Register
+（存储地址寄存器）
+Memory Data Register
+（存储数据寄存器）&lt;/li&gt;
+&lt;li&gt;存储单元：每个存储单元存放一串二进制代码
+存储字（word）：存储单元中二进制代码的组合
+存储字长：存储单元中二进制代码的位数
+存储元：即存储二进制的电子元件，每个存储元可存 1bit&lt;/li&gt;
+&lt;li&gt;MAR位数反映存储单元的个数&lt;/li&gt;
+&lt;li&gt;数据在存储体内按地址存储&lt;/li&gt;
+&lt;li&gt;MDR位数=存储字长&lt;/li&gt;
+&lt;li&gt;例：
+MAR=4位 总共有24个存储单元
+MDR=16位 每个存储单元可存放16bit，
+117 (word) = 16bit
+易混淆：1个字节（Byte）= 8bit
+1B=1个字节，1b=1个bit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运算器的基本组成&#34;&gt;运算器的基本组成
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;运算器：用于实现算术运算（如：加减乘除）、逻辑运算（如：与或非）
+ACC:累加器，用于存放操作数，或运算结果。
+MQ:乘商寄存器，在乘、除运算时，用于存放操作数或运算结果。
+X:通用的操作数寄存器，用于存放操作数
+ALU:算术逻辑单元，通过内部复杂的电路实现算数运算、逻辑运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;加&lt;/th&gt;
+          &lt;th&gt;减&lt;/th&gt;
+          &lt;th&gt;乘&lt;/th&gt;
+          &lt;th&gt;除&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ACC&lt;/td&gt;
+          &lt;td&gt;被加数、和&lt;/td&gt;
+          &lt;td&gt;被减数、差&lt;/td&gt;
+          &lt;td&gt;乘积高位&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MQ&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;乘数、乘积低位&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;加数&lt;/td&gt;
+          &lt;td&gt;减数&lt;/td&gt;
+          &lt;td&gt;被乘数&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ACC:Accumulator&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MQ:Multiple-Quotient Register&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ALU:Arithmetic and Logic Unit&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;控制器的基本组成&#34;&gt;控制器的基本组成
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;控制器由CU、IR和PC组成：
+CU：控制单元，分析指令，给出控制信号
+IR：指令寄存器，存放当前执行的指令
+PC：程序计数器，存放下一条指令地址，有自动加1功能
+Control Unit
+Instruction Register
+Program Counter
+完成一条指令：取指令-&amp;gt;分析指令-&amp;gt;执行指令
+取指=PC+IR
+CU 执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;计算机的工作过程&#34;&gt;计算机的工作过程
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;主存地址&lt;/th&gt;
+          &lt;th&gt;指令&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;注释&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;操作码：000001 地址码：0000000101&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;取数a至ACC&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;操作码：000100 地址码：0000000110&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;乘得ab，存于ACC中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;操作码：000011 地址码：0000000111&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;加c得ab+c，存于ACC中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;操作码000010 地址码：0000001000&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;将ab+c.存于主存单元&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;操作码：000110 地址码：0000000000&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;停机&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;0000000000000010&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;原始数据a=2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;0000000000000011&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;原始数据b=3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7&lt;/td&gt;
+          &lt;td&gt;0000000000000001&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;原始数据c=1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;0000000000000000&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;原始数据y=0&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
         </item>
         <item>
-        <title>数据结构</title>
-        <link>https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <title>数据结构---王道网课</title>
+        <link>https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84---%E7%8E%8B%E9%81%93%E7%BD%91%E8%AF%BE/</link>
         <pubDate>Tue, 12 Nov 2024 20:43:19 +0800</pubDate>
         
-        <guid>https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+        <guid>https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84---%E7%8E%8B%E9%81%93%E7%BD%91%E8%AF%BE/</guid>
         <description>&lt;h1 id=&#34;数据结构基本概念&#34;&gt;数据结构基本概念
 &lt;/h1&gt;&lt;h2 id=&#34;数据&#34;&gt;数据
 &lt;/h2&gt;&lt;ul&gt;
@@ -2251,7 +2538,24 @@ First In First Out（FIFO）&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;p&gt;![图片](&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/manunited0518/image-store/raw/master/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gitee.com/manunited0518/image-store/raw/master/&lt;/a&gt;截屏2024-11-27 16.05.41_副本.png)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>数据结构--王道书</title>
+        <link>https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84--%E7%8E%8B%E9%81%93%E4%B9%A6/</link>
+        <pubDate>Tue, 12 Nov 2024 20:43:19 +0800</pubDate>
+        
+        <guid>https://Manunited.github.io/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84--%E7%8E%8B%E9%81%93%E4%B9%A6/</guid>
+        <description>&lt;h1 id=&#34;第1章----绪论&#34;&gt;第1章    绪论
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;考纲内容
+算法时间复杂度和空间复杂度的分析与计算&lt;/li&gt;
+&lt;li&gt;复习提示
+本章内容是数据结构概述，并不在考研大纲中。读者可通过对本章的学习，初步了解数据结构的基本内容和基本方法。分析算法的时间复杂度和空间复杂度是本章重点，需要熟练掌握，算法设计题通常都会要求分析时间复杂度、空间复杂度，同时会出现考查时间复杂度的选择题。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
         </item>
         <item>
         <title>网络安全</title>
