@@ -640,6 +640,8 @@
         <li><a href="#无向图有向图">无向图、有向图</a></li>
         <li><a href="#简单图多重图">简单图、多重图</a></li>
         <li><a href="#顶点的度入度出度">顶点的度、入度、出度</a></li>
+        <li><a href="#顶点-顶点的关系描述">顶点-顶点的关系描述</a></li>
+        <li><a href="#连通图强连通图">连通图、强连通图</a></li>
       </ol>
     </li>
   </ol>
@@ -698,7 +700,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 19 分钟
+                    阅读时长: 20 分钟
                 </time>
             </div>
         
@@ -4675,6 +4677,37 @@ n<sub>0</sub>=n<sub>2</sub>+1 &ndash;&gt; n<sub>0</sub>+n<sub>2</sub>一定是�
 顶点v的度等于其入度和出度之和，即TD（v）=ID（V）+ OD（w）。</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog45.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="顶点-顶点的关系描述">顶点-顶点的关系描述
+</h3><ul>
+<li>路径一一顶点v<sub>p</sub>到顶点v<sub>q</sub>之间的一条路径是指顶点序列&mdash;&ndash;v<sub>p</sub>,v<sub>i<sub>1</sub></sub>&hellip;&hellip;v<sub>i<sub>m</sub></sub>,v<sub>q</sub></li>
+<li>回路一一第一个顶点和最后一个顶点相同的路径称为回路或环</li>
+<li>简单路径一一在路径序列中，顶点不重复出现的路径称为简单路径。</li>
+<li>简单回路—-除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路称为简单回路。</li>
+<li>路径长度一一路径上边的数目</li>
+<li>点到点的距离一一从顶点u出发到顶点v的最短路径若存在，则此路径的长度称为从u到v的距离。
+若从u到v根本不存在路径，则记该距离为无穷（∞）。</li>
+<li>无向图中，若从顶点v到顶点w有路径存在，则称v和w是连通的</li>
+<li>有向图中，若从顶点v到顶点w和从顶点w到顶点v之间都有路径，则称这两个顶点是强连通的</li>
+</ul>
+<h3 id="连通图强连通图">连通图、强连通图
+</h3><ul>
+<li>
+<p>若图G中任意两个顶点都是连通的，则称图G
+连通图，否则称为非连通图。</p>
+<p>常见考点：
+对于n个顶点的无向图G，
+若G是连通图，则最少有n-1条边
+若G是非连通图，则最多可能有C-1条边</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog47.png"
 	
 	
 	

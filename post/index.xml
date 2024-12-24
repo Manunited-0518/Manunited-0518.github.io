@@ -4413,6 +4413,37 @@ n&lt;sub&gt;0&lt;/sub&gt;=n&lt;sub&gt;2&lt;/sub&gt;+1 &amp;ndash;&amp;gt; n&lt;s
 	
 	
 &gt;&lt;/p&gt;
+&lt;h3 id=&#34;顶点-顶点的关系描述&#34;&gt;顶点-顶点的关系描述
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;路径一一顶点v&lt;sub&gt;p&lt;/sub&gt;到顶点v&lt;sub&gt;q&lt;/sub&gt;之间的一条路径是指顶点序列&amp;mdash;&amp;ndash;v&lt;sub&gt;p&lt;/sub&gt;,v&lt;sub&gt;i&lt;sub&gt;1&lt;/sub&gt;&lt;/sub&gt;&amp;hellip;&amp;hellip;v&lt;sub&gt;i&lt;sub&gt;m&lt;/sub&gt;&lt;/sub&gt;,v&lt;sub&gt;q&lt;/sub&gt;&lt;/li&gt;
+&lt;li&gt;回路一一第一个顶点和最后一个顶点相同的路径称为回路或环&lt;/li&gt;
+&lt;li&gt;简单路径一一在路径序列中，顶点不重复出现的路径称为简单路径。&lt;/li&gt;
+&lt;li&gt;简单回路—-除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路称为简单回路。&lt;/li&gt;
+&lt;li&gt;路径长度一一路径上边的数目&lt;/li&gt;
+&lt;li&gt;点到点的距离一一从顶点u出发到顶点v的最短路径若存在，则此路径的长度称为从u到v的距离。
+若从u到v根本不存在路径，则记该距离为无穷（∞）。&lt;/li&gt;
+&lt;li&gt;无向图中，若从顶点v到顶点w有路径存在，则称v和w是连通的&lt;/li&gt;
+&lt;li&gt;有向图中，若从顶点v到顶点w和从顶点w到顶点v之间都有路径，则称这两个顶点是强连通的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;连通图强连通图&#34;&gt;连通图、强连通图
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;若图G中任意两个顶点都是连通的，则称图G
+连通图，否则称为非连通图。&lt;/p&gt;
+&lt;p&gt;常见考点：
+对于n个顶点的无向图G，
+若G是连通图，则最少有n-1条边
+若G是非连通图，则最多可能有C-1条边&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog47.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
