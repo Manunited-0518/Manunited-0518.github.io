@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="基础知识 C/S架构与B/S架构 C/S架构，特点：需要安装、偶尔更新、不跨平台、开发更具针对性。 B/S架构，特点：无需安装、无需更新、可跨平台、开发更具通用性。 一点解释：名词解释：C=&gt;client（客户端）、B=&gt; browser（浏览器）、S=&gt;server（服务器）。 服务器：为软件提供数据的设备（在背后默默的付出）。\nHTML简介 全称：HyperText Markup Language（超文本标记语言）。 超文本：暂且简单理解为“超级的文本”，和普通文本比，内容更丰富。 标 记：文本要变成超文本，就需要用到各种标记符号。 语言：每一个标记的写法、读音、使用规则，组成了一个标记语言。 相关国际组织（了解） 1. IETF 全称：Internet Engineering Task Force（国际互联网工程任务组），成立于1985年底，是一个权威的互联网技术标准化组织，主要负责互联网相关技术规范的研发和制定，当前绝大多数国际互联网技术标准均出自IETF。官网：https://www.ietf.org\n2. W3C 全称：World Wide Web Consortium（万维网联盟），创建于1994年，是目前Web技术领域，最具影响力的技术标准机构。共计发布了200多项技术标准和实施指南，对互联网技术的发展和应用起到了基础性和根本性的支撑作用，官网：https://www.w3.org\n3. WHATWF 全称：Web Hypertext Application Technology Working Group（网页超文本应用技术工作小组）成立于2004年，是一个以推动网络HTML 5标准为目的而成立的组织。由Opera、Mozilla基金会、苹果，等这些浏览器厂商组成。官网：https://whatwg.org/\nHTML发展历史（了解） 从HTML 1.0开始发展，期间经历了很多版本，目前HTML的最新标准是：HMTL 5，具体发展史如图（了解即可）。\nHTML入门 HTML标签 标签 又称 元素，是HTML的基本组成单位。 标签分为：双标签 与 单标签（绝大多数都是双标签）。 标签名不区分大小写，但推荐小写，因为小写更规范。 双标签(格式)：&lt;标签名&gt;标签体&lt;标签名&gt; 单标签(格式)：&lt;标签名/&gt;(/可省略) 标签之间的关系：并列关系、嵌套关系，可以使用 tab 键进行缩进： HTML标签属性 用于给标签提供 附加信息。\n可以写在：起始标签 或 单标签中，形式如下：\n例如：\n1 2 &lt;marquee 10op=&#34;1&#34; bgcolor=&#34;orange&#34;&gt;曼联必胜！！！&lt;/marquee&gt; &lt;input type=&#34;password&#34;&gt; 有些特殊的属性，没有属性名，只有属性值，例如： 1 &lt;input disabled&gt; 注意点\n">
+<title>HTML和CSS</title>
+
+<link rel='canonical' href='http://localhost:1313/p/html%E5%92%8Ccss/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="HTML和CSS">
+<meta property='og:description' content="基础知识 C/S架构与B/S架构 C/S架构，特点：需要安装、偶尔更新、不跨平台、开发更具针对性。 B/S架构，特点：无需安装、无需更新、可跨平台、开发更具通用性。 一点解释：名词解释：C=&gt;client（客户端）、B=&gt; browser（浏览器）、S=&gt;server（服务器）。 服务器：为软件提供数据的设备（在背后默默的付出）。\nHTML简介 全称：HyperText Markup Language（超文本标记语言）。 超文本：暂且简单理解为“超级的文本”，和普通文本比，内容更丰富。 标 记：文本要变成超文本，就需要用到各种标记符号。 语言：每一个标记的写法、读音、使用规则，组成了一个标记语言。 相关国际组织（了解） 1. IETF 全称：Internet Engineering Task Force（国际互联网工程任务组），成立于1985年底，是一个权威的互联网技术标准化组织，主要负责互联网相关技术规范的研发和制定，当前绝大多数国际互联网技术标准均出自IETF。官网：https://www.ietf.org\n2. W3C 全称：World Wide Web Consortium（万维网联盟），创建于1994年，是目前Web技术领域，最具影响力的技术标准机构。共计发布了200多项技术标准和实施指南，对互联网技术的发展和应用起到了基础性和根本性的支撑作用，官网：https://www.w3.org\n3. WHATWF 全称：Web Hypertext Application Technology Working Group（网页超文本应用技术工作小组）成立于2004年，是一个以推动网络HTML 5标准为目的而成立的组织。由Opera、Mozilla基金会、苹果，等这些浏览器厂商组成。官网：https://whatwg.org/\nHTML发展历史（了解） 从HTML 1.0开始发展，期间经历了很多版本，目前HTML的最新标准是：HMTL 5，具体发展史如图（了解即可）。\nHTML入门 HTML标签 标签 又称 元素，是HTML的基本组成单位。 标签分为：双标签 与 单标签（绝大多数都是双标签）。 标签名不区分大小写，但推荐小写，因为小写更规范。 双标签(格式)：&lt;标签名&gt;标签体&lt;标签名&gt; 单标签(格式)：&lt;标签名/&gt;(/可省略) 标签之间的关系：并列关系、嵌套关系，可以使用 tab 键进行缩进： HTML标签属性 用于给标签提供 附加信息。\n可以写在：起始标签 或 单标签中，形式如下：\n例如：\n1 2 &lt;marquee 10op=&#34;1&#34; bgcolor=&#34;orange&#34;&gt;曼联必胜！！！&lt;/marquee&gt; &lt;input type=&#34;password&#34;&gt; 有些特殊的属性，没有属性名，只有属性值，例如： 1 &lt;input disabled&gt; 注意点\n">
+<meta property='og:url' content='http://localhost:1313/p/html%E5%92%8Ccss/'>
+<meta property='og:site_name' content='MUBlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-12T20:43:19&#43;08:00'/><meta property='article:modified_time' content='2024-11-12T20:43:19&#43;08:00'/>
+<meta name="twitter:title" content="HTML和CSS">
+<meta name="twitter:description" content="基础知识 C/S架构与B/S架构 C/S架构，特点：需要安装、偶尔更新、不跨平台、开发更具针对性。 B/S架构，特点：无需安装、无需更新、可跨平台、开发更具通用性。 一点解释：名词解释：C=&gt;client（客户端）、B=&gt; browser（浏览器）、S=&gt;server（服务器）。 服务器：为软件提供数据的设备（在背后默默的付出）。\nHTML简介 全称：HyperText Markup Language（超文本标记语言）。 超文本：暂且简单理解为“超级的文本”，和普通文本比，内容更丰富。 标 记：文本要变成超文本，就需要用到各种标记符号。 语言：每一个标记的写法、读音、使用规则，组成了一个标记语言。 相关国际组织（了解） 1. IETF 全称：Internet Engineering Task Force（国际互联网工程任务组），成立于1985年底，是一个权威的互联网技术标准化组织，主要负责互联网相关技术规范的研发和制定，当前绝大多数国际互联网技术标准均出自IETF。官网：https://www.ietf.org\n2. W3C 全称：World Wide Web Consortium（万维网联盟），创建于1994年，是目前Web技术领域，最具影响力的技术标准机构。共计发布了200多项技术标准和实施指南，对互联网技术的发展和应用起到了基础性和根本性的支撑作用，官网：https://www.w3.org\n3. WHATWF 全称：Web Hypertext Application Technology Working Group（网页超文本应用技术工作小组）成立于2004年，是一个以推动网络HTML 5标准为目的而成立的组织。由Opera、Mozilla基金会、苹果，等这些浏览器厂商组成。官网：https://whatwg.org/\nHTML发展历史（了解） 从HTML 1.0开始发展，期间经历了很多版本，目前HTML的最新标准是：HMTL 5，具体发展史如图（了解即可）。\nHTML入门 HTML标签 标签 又称 元素，是HTML的基本组成单位。 标签分为：双标签 与 单标签（绝大多数都是双标签）。 标签名不区分大小写，但推荐小写，因为小写更规范。 双标签(格式)：&lt;标签名&gt;标签体&lt;标签名&gt; 单标签(格式)：&lt;标签名/&gt;(/可省略) 标签之间的关系：并列关系、嵌套关系，可以使用 tab 键进行缩进： HTML标签属性 用于给标签提供 附加信息。\n可以写在：起始标签 或 单标签中，形式如下：\n例如：\n1 2 &lt;marquee 10op=&#34;1&#34; bgcolor=&#34;orange&#34;&gt;曼联必胜！！！&lt;/marquee&gt; &lt;input type=&#34;password&#34;&gt; 有些特殊的属性，没有属性名，只有属性值，例如： 1 &lt;input disabled&gt; 注意点\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu18158790818522699153.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🚀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">MUBlog</a></h1>
+            <h2 class="site-description">Welcome to my Blog!!!</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="http://localhost:1313/en/" >English</option>
+                                
+                                    <option value="http://localhost:1313/" selected>中文</option>
+                                
+                                    <option value="http://localhost:1313/ar/" >عربي</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#cs架构与bs架构">C/S架构与B/S架构</a></li>
+    <li><a href="#html简介">HTML简介</a></li>
+    <li><a href="#相关国际组织了解">相关国际组织（了解）</a>
+      <ol>
+        <li><a href="#1-ietf">1. IETF</a></li>
+        <li><a href="#2-w3c">2. W3C</a></li>
+        <li><a href="#3-whatwf">3. WHATWF</a></li>
+      </ol>
+    </li>
+    <li><a href="#html发展历史了解">HTML发展历史（了解）</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#html标签">HTML标签</a></li>
+    <li><a href="#html标签属性">HTML标签属性</a></li>
+    <li><a href="#html基本结构">HTML基本结构</a></li>
+    <li><a href="#html-注释">HTML 注释</a></li>
+    <li><a href="#html-文档声明">HTML 文档声明</a></li>
+    <li><a href="#html-字符编码">HTML 字符编码</a></li>
+    <li><a href="#html-设置语言">HTML 设置语言</a></li>
+    <li><a href="#html标准结构">HTML标准结构</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#开发者文档">开发者文档</a></li>
+    <li><a href="#排版标签">排版标签</a></li>
+    <li><a href="#语义化标签">语义化标签</a></li>
+    <li><a href="#块级元素与行内元素">块级元素与行内元素</a></li>
+    <li><a href="#文本标签_常用的">文本标签_常用的</a></li>
+    <li><a href="#文本标签_不常用的">文本标签_不常用的</a></li>
+    <li><a href="#图片标签">图片标签</a>
+      <ol>
+        <li><a href="#基本使用">基本使用</a></li>
+      </ol>
+    </li>
+    <li><a href="#路径的分类">路径的分类</a>
+      <ol>
+        <li><a href="#相对路径">相对路径</a></li>
+      </ol>
+    </li>
+    <li><a href="#绝对路径">绝对路径</a></li>
+    <li><a href="#常见图片格式">常见图片格式</a></li>
+    <li><a href="#超链接">超链接</a></li>
+    <li><a href="#列表">列表</a></li>
+    <li><a href="#表格">表格</a></li>
+    <li><a href="#表单">表单</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/html%E5%92%8Ccss/">HTML和CSS</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 12, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="基础知识">基础知识
+</h1><h2 id="cs架构与bs架构">C/S架构与B/S架构
+</h2><ul>
+<li>C/S架构，特点：需要安装、偶尔更新、不跨平台、开发更具针对性。</li>
+<li>B/S架构，特点：无需安装、无需更新、可跨平台、开发更具通用性。</li>
+</ul>
+<p>一点解释：名词解释：C=&gt;client（客户端）、B=&gt; browser（浏览器）、S=&gt;server（服务器）。
+服务器：为软件提供数据的设备（在背后默默的付出）。</p>
+<h2 id="html简介">HTML简介
+</h2><ul>
+<li>全称：HyperText Markup Language（超文本标记语言）。
+<ul>
+<li>超文本：暂且简单理解为“超级的文本”，和普通文本比，内容更丰富。</li>
+<li>标 记：文本要变成超文本，就需要用到各种标记符号。</li>
+<li>语言：每一个标记的写法、读音、使用规则，组成了一个标记语言。</li>
+</ul>
+</li>
+</ul>
+<h2 id="相关国际组织了解">相关国际组织（了解）
+</h2><h3 id="1-ietf">1. IETF
+</h3><p>全称：Internet Engineering Task Force（国际互联网工程任务组），成立于1985年底，是一个权威的互联网技术标准化组织，主要负责互联网相关技术规范的研发和制定，当前绝大多数国际互联网技术标准均出自IETF。官网：https://www.ietf.org</p>
+<h3 id="2-w3c">2. W3C
+</h3><p>全称：World Wide Web Consortium（万维网联盟），创建于1994年，是目前Web技术领域，最具影响力的技术标准机构。共计发布了200多项技术标准和实施指南，对互联网技术的发展和应用起到了基础性和根本性的支撑作用，官网：https://www.w3.org</p>
+<h3 id="3-whatwf">3. WHATWF
+</h3><p>全称：Web Hypertext Application Technology Working Group（网页超文本应用技术工作小组）成立于2004年，是一个以推动网络HTML 5标准为目的而成立的组织。由Opera、Mozilla基金会、苹果，等这些浏览器厂商组成。官网：https://whatwg.org/</p>
+<h2 id="html发展历史了解">HTML发展历史（了解）
+</h2><p>从HTML 1.0开始发展，期间经历了很多版本，目前HTML的最新标准是：HMTL 5，具体发展史如图（了解即可）。</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h1 id="html入门">HTML入门
+</h1><h2 id="html标签">HTML标签
+</h2><ul>
+<li>标签 又称 元素，是HTML的基本组成单位。</li>
+<li>标签分为：双标签 与 单标签（绝大多数都是双标签）。</li>
+<li>标签名不区分大小写，但推荐小写，因为小写更规范。</li>
+<li>双标签(格式)：&lt;标签名&gt;标签体&lt;标签名&gt;</li>
+<li>单标签(格式)：&lt;标签名/&gt;(/可省略)</li>
+<li>标签之间的关系：并列关系、嵌套关系，可以使用 tab 键进行缩进：</li>
+</ul>
+<h2 id="html标签属性">HTML标签属性
+</h2><ul>
+<li>
+<p>用于给标签提供 附加信息。</p>
+</li>
+<li>
+<p>可以写在：起始标签 或 单标签中，形式如下：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html2.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+</ul>
+<p>例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">marquee</span> <span class="na">10op</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&#34;orange&#34;</span><span class="p">&gt;</span>曼联必胜！！！<span class="p">&lt;/</span><span class="nt">marquee</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>有些特殊的属性，没有属性名，只有属性值，例如：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">disabled</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>注意点</p>
+<p>1.不同的标签，有不同的属性；也有一些通用属性（在任何标签内都能写，后面会详细总结）。</p>
+<p>2．属性名、属性值不能乱写，都是W3C规定好的。</p>
+<p>3．属性名、属性值，都不区分大小写，但推荐小写。</p>
+<p>4． 双引号，也可以写成单引号，甚至不写都行，但还是推荐写双引号。</p>
+<p>5． 标签中不要出现同名属性，否则后写的会失效.</p>
+</li>
+</ul>
+<h2 id="html基本结构">HTML基本结构
+</h2><p>1．在网页中，如何查看某段结构的具体代码？——点击鼠标右键，选择“检查”。
+2． 【检查】和【查看网页源代码】的区别：</p>
+<ul>
+<li>【查看网页源代码】看到的是：程序员编写的源代码。</li>
+<li>【检查】看到的是：经过浏览器“处理”后的源代码。</li>
+<li>备注：日常开发中，【检查】用的最多。</li>
+</ul>
+<p>3． 网页的 基本结构 如下：</p>
+<ul>
+<li>想要呈现在网页中的内容写在 body 标签中。</li>
+<li>head 标签中的内容不会出现在网页中。</li>
+<li>head 标签中的 title 标签可以指定网页的标题。</li>
+<li><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html3.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+</ul>
+<h2 id="html-注释">HTML 注释
+</h2><p>1.特点：注释的内容会被浏览器所忽略，不会呈现到页面中，但源代码中依然可见。
+2．作用：对代码进行解释和说明。
+3．写法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 下面的文字只能滚动一次--&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">marquee</span> <span class="na">100p</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>尚硅谷<span class="p">&lt;/</span><span class="nt">marquee</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 下面的文字可以无限滚动 --&gt;<span class="p">&lt;</span><span class="nt">marquee</span><span class="p">&gt;</span>尚硅谷123<span class="p">&lt;/</span><span class="nt">marquee</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>注释不可以嵌套，以下这么写是错的（反例）。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">＜！--
+</span></span><span class="line"><span class="cl">我是一段注释
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 我是一段注释 --&gt;
+</span></span><span class="line"><span class="cl">--&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="html-文档声明">HTML 文档声明
+</h2><p>1． 作用：告诉浏览器当前网页的版本。
+2．写法：</p>
+<ul>
+<li>
+<p>旧写法：要依网页所用的HTML版本而定，写法有很多。</p>
+<ul>
+<li>具体有哪些写法请参考：W3C官网-文档声明（了解即可)</li>
+</ul>
+</li>
+<li>
+<p>新写法：一切都变得简单了！W3C推荐使用HTML5的写法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span> !DOCTYPE html&gt;
+</span></span><span class="line"><span class="cl">或
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;! DOCTYPE HTML&gt;</span>
+</span></span><span class="line"><span class="cl">或
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<ol start="3">
+<li>注意：文档声明，必须在网页的第一行，且在 html 标签的外侧。</li>
+</ol>
+<h2 id="html-字符编码">HTML 字符编码
+</h2><p>1． 计算机对数据的操作：</p>
+<ul>
+<li>存储时，对数据进行：编码。</li>
+<li>读取时，对数据进行：解码。</li>
+</ul>
+<ol start="2">
+<li>编码、解码，会遵循一定的规范——字符集。</li>
+<li>字符集有很多中，常见的有（了解）：
+<ul>
+<li>ASCII：大写字母、小写字母、数字、一些符号，共计128个。</li>
+<li>ISO 8859-1：在ASCII基础上，扩充了一些希腊字符等，共计是256个。</li>
+<li>GB2312：继续扩充，收录了 6763个常用汉字、682个字符。</li>
+<li>GBK：收录了的汉字和符号达到20000+，支持繁体中文。</li>
+<li>UTF-8 ：包含世界上所有语言的：所有文字与符号。——很常用。</li>
+</ul>
+</li>
+<li>使用原则
+<ul>
+<li>原则1：存储时，务必采用合适的字符编码。
+否则：无法存储，数据会丢失！</li>
+<li>原则2：存储时采用哪种方式编码，读取时就采用哪种方式解码。
+否则：数据错乱（乱码）！</li>
+<li>总结：
+<ul>
+<li>平时编写代码时，统一采用 UTF-8 编码（最稳妥）。</li>
+<li>为了让浏览器在渲染 html 文件时，不犯错误，可以通过 meta 标签配合 charset 属性指定字符编码。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="html-设置语言">HTML 设置语言
+</h2><ol>
+<li>主要作用：
+了 让浏览器显示对应的翻译提示。
+了 有利于搜索引擎优化。</li>
+<li>具体写法：
+ <html lang="zh-CN">
+</li>
+<li>扩展知识：lang 属性的编写规则（作一个课外扩展知识，了解即可）。
+<ul>
+<li>第一种写法（语言-国家/地区），例如：
+<ul>
+<li>zh-CN ：中文-中国大陆（简体中文）</li>
+<li>zh-TW ：中文-中国台湾（繁体中文）</li>
+<li>zh：中文</li>
+<li>en-US：英语-美国</li>
+<li>en-GB：英语-英国</li>
+</ul>
+</li>
+<li>第二种写法（语言一具体种类）已不推荐使用，例如：</li>
+<li>zh-Hans：中文一简体</li>
+<li>zh-Hant：中文—繁体</li>
+<li>W3School上的说明：《语言代码参考手册》、《国家/地区代码参考手册》\</li>
+<li>W3C官网上的说明：《Language tags in HTML》</li>
+</ul>
+</li>
+</ol>
+<h2 id="html标准结构">HTML标准结构
+</h2><ul>
+<li>
+<p>HTML标准结构如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;zh-CN&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>我是一个标题<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">‹body&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span> <span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>输入！，随后回车即可快速生成标准结构。</p>
+</li>
+<li>
+<p>配置 VScode 的内置插件 emmet，可以对生成结构的属性进行定制。</p>
+</li>
+<li>
+<p>在存放代码的文件夹中，存放一个 favicon.ico 图片，可配置网站图标。</p>
+</li>
+</ul>
+<h1 id="html基础">HTML基础
+</h1><h2 id="开发者文档">开发者文档
+</h2><ul>
+<li>W3CEXX: <a class="link" href="https://www.w3c.org"  target="_blank" rel="noopener"
+    >www.w3c.org</a></li>
+<li>W3School: <a class="link" href="https://www.w3school.com.cn"  target="_blank" rel="noopener"
+    >www.w3school.com.cn</a></li>
+<li>MDN: developer .mozilla.org -—平时用的最多。</li>
+</ul>
+<h2 id="排版标签">排版标签
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签含义</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>h1~h6</td>
+          <td>标题</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>p</td>
+          <td>段落</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>div</td>
+          <td>没有任何含义，用于整体布局</td>
+          <td>双</td>
+      </tr>
+  </tbody>
+</table></div>
+<ul>
+<li>h1 最好写一个，h2~h6 能适当多写。</li>
+<li>h1~h6 不能互相嵌套，例如：h1 标签中最好不要写 h2 标签了。</li>
+<li>p标签很特殊！它里面不能有：h1~h6、p、div 标签（暂时先这样记，后面会说规律）。</li>
+</ul>
+<h2 id="语义化标签">语义化标签
+</h2><ul>
+<li>概念：用特定的标签，去表达特定的含义。</li>
+<li>原则：标签的默认效果不重要（后期可以通过cSS随便控制效果），语义最重要！</li>
+<li>举例：对于h1 标签，效果是文字很大（不重要），语义是网页主要内容（很重要）。</li>
+<li>优势：
+<ul>
+<li>代码结构清晰可读性强。</li>
+<li>有利于 SEO（搜索引擎优化）。</li>
+<li>方便设备解析（如屏幕阅读器、盲人阅读器等）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="块级元素与行内元素">块级元素与行内元素
+</h2><ul>
+<li>块级元素：独占一行（排版标签都是块级元素）。</li>
+<li>行内元素：不独占一行（目前只学了：input，稍后会学习更多）。</li>
+<li>使用原则：
+<ul>
+<li>块级元素中能写行内元素和块级元素（简单记：块级元素中几乎什么都能写）</li>
+<li>行内元素中能写行内元素，但不能写块级元素。</li>
+<li>一些特殊的规则：
+<ul>
+<li>h1~h6 不能互相嵌套。</li>
+<li>p中不要写块级元素。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="文本标签_常用的">文本标签_常用的
+</h2><ul>
+<li>用于包裹：词汇、短语等。</li>
+<li>通常写在排版标签里面。</li>
+<li>排版标签更宏观（大段的文字），文本标签更微观（词汇、短语）。</li>
+<li>文本标签通常都是行内元素。</li>
+</ul>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签语义</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>em</td>
+          <td>要着重阅读的内容</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>strong</td>
+          <td>十分重要的内容（语气比em要强）</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>span</td>
+          <td>没有语义，用于包裹短语的通用容器</td>
+          <td>双</td>
+      </tr>
+  </tbody>
+</table></div>
+<ul>
+<li>生活中的例子：div 是大包装袋，span 是小包装袋。</li>
+</ul>
+<h2 id="文本标签_不常用的">文本标签_不常用的
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签语义</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>cite</td>
+          <td>作品标题（书籍、歌曲、电影、电视节目、绘画、雕塑）</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>dfn</td>
+          <td>特殊术语，或专属名词</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>del和ins</td>
+          <td>删除的文本【与】插入的文本</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>sub与sup</td>
+          <td>下标文字【与】上标文字</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>code</td>
+          <td>一段代码</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>samp</td>
+          <td>从正常的上下文中，将某些内容提取出来，例如：标识设备输出</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>kbd</td>
+          <td>键盘文本，表示文本是通过键盘输入的，经常用在与计算机相关的手册中</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>abbr</td>
+          <td>缩写，最好配合上 title 属性</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>bdo</td>
+          <td>更改文本方向，要配合dir 属性，可选值：ltr(默认值)、rtl</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>var</td>
+          <td>标记变量，可以与 code 标签一起使用</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>small</td>
+          <td>附属细则，例如：包括版权、法律文本。&ndash;很少使用</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>b</td>
+          <td>摘要中的关键字、评论中的产品名称。&ndash;很少使用</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>i</td>
+          <td>本意是：人物的思想活动、所说的话等等。现在多用于：呈现字体图标（后面要讲的内容）。</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>u</td>
+          <td>与正常内容有反差文本，例如：错的单词、不合适的描述等。&ndash;很少使用</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>q</td>
+          <td>短引用&ndash;很少使用</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>blockquote</td>
+          <td>长引用&ndash;很少使用</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>address</td>
+          <td>地址信息</td>
+          <td>双</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>备注：</p>
+<ul>
+<li>这些不常用的文本标签，编码时不用过于纠结（酌情而定，不用也没毛病）。</li>
+<li>blockquote 与 address 是块级元素，其他的文本标签，都是行内元素。</li>
+<li>有些语义感不强的标签，我们很少使用，例如：small、b、 u、 q、 blockquote</li>
+<li>HTML标签太多了！记住那些：重要的、语义感强的标签即可；截止目前，有这些：h1~h6, p. div, em, strong, span</li>
+</ul>
+<h2 id="图片标签">图片标签
+</h2><h3 id="基本使用">基本使用
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签语义</th>
+          <th>常用属性</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>img</td>
+          <td>图片</td>
+          <td>src：图片路径（又称：图片地址）——图片的具体位置<br/>alt：图片描述<br/>width：图片宽度，单位是像素，例如：200px 或 200<br/>height：图片高度，单位是像素，例如：200px 或200</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<ul>
+<li>
+<p>总结：</p>
+<ul>
+<li>
+<p>像素（px）是一种单位，学到css时，我们会详细讲解。</p>
+</li>
+<li>
+<p>尽量不同时修改图片的宽和高，可能会造成比例失调。</p>
+</li>
+<li>
+<p>暂且认为 img 是行内元素（学到css 时，会认识一个新的元素分类，目前咱们只知道：
+（块、行内）。</p>
+</li>
+<li>
+<p>alt 属性的作用：</p>
+<ul>
+<li>搜索引擎通过 alt 属性，得知图片的内容。一一最主要的作用。</li>
+<li>当图片无法展示时候，有些浏览器会呈现 alt 属性的值。</li>
+<li>盲人阅读器会朗读 alt 属性的值。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="路径的分类">路径的分类
+</h2><h3 id="相对路径">相对路径
+</h3><p>以当前位置作为参考点，去建立路径。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>符号</th>
+          <th>含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>./</td>
+          <td>同级</td>
+      </tr>
+      <tr>
+          <td>/</td>
+          <td>下一级</td>
+      </tr>
+      <tr>
+          <td>../</td>
+          <td>上一级</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>注意点：</p>
+<ul>
+<li>相对路径中的./可以省略不写。</li>
+<li>相对路径依赖的是当前位置，后期若调整了文件位置，那么文件中的路径也要修改。</li>
+</ul>
+<h2 id="绝对路径">绝对路径
+</h2><p>以<strong>根位置</strong>作为参考点，去建立路径。</p>
+<ul>
+<li>本地绝对路径：E:/a/b/c/奥特曼.jpg。（很少使用）</li>
+<li>网络绝对路径：http://www.atguigu.com/images/index_new/1ogo.png。</li>
+</ul>
+<p>注意点：</p>
+<ul>
+<li>使用本地绝对路径，一旦更换设备，路径处理起来比较麻烦，所以很少使用。</li>
+<li>使用网络绝对路径，确实方便，但要注意：若服务器开启了防盗链，会造成图片引入失败。</li>
+</ul>
+<h2 id="常见图片格式">常见图片格式
+</h2><ol>
+<li>jpg 格式
+<ul>
+<li>概述：扩展名为.jpg 或.jpeg，是一种有损的压缩格式（把肉眼不容易观察出来的细节丟弃了）。</li>
+<li>主要特点：支持的颜色丰富、占用空间较小、不支持透明背景、不支持动态图。</li>
+<li>使用场景：对图片细节没有极高要求的场景，例如：网站的产品宣传图等。&mdash;-该格式网页中很常见。</li>
+</ul>
+</li>
+<li>png格式
+<ul>
+<li>概述：扩展名为.png，是一种无损的压缩格式，能够更高质量的保存图片。</li>
+<li>主要特点：支持的颜色丰富、占用空间略大、支持透明背景、不支持动态图。</li>
+<li>使用场景：①想让图片有透明背景；②想更高质量的呈现图片；例如：公司logo图、重要配图等。</li>
+</ul>
+</li>
+<li>bmp格式
+<ul>
+<li>概述：扩展名为.bmp，不进行压缩的一种格式，在最大程度上保留图片更多的细节。</li>
+<li>主要特点：支持的颜色丰富、保留的细节更多、占用空间极大、不支持透明背景、不支持动态图。</li>
+<li>使用场景：对图片细节要求极高的场景，例如：一些大型游戏中的图片。（网页中很少使用）</li>
+</ul>
+</li>
+<li>gif格式
+<ul>
+<li>概述：扩展名为 ．gif，仅支持256种颜色，色彩呈现不是很完整。</li>
+<li>主要特点：支持的颜色较少、支持简单透明背景、支持动态图。</li>
+<li>使用场景：网页中的动态图片。</li>
+</ul>
+</li>
+<li>webp格式
+<ul>
+<li>概述：扩展名为．webp，谷歌推出的一种格式，专门用来在网页中呈现图片。</li>
+<li>主要特点：具备上述几种格式的优点，但兼容性不太好，一旦使用务必要解决兼容性问题。</li>
+<li>使用场景：网页中的各种图片。</li>
+</ul>
+</li>
+<li>base64格式
+<ul>
+<li>本质：一串特殊的文本，要通过浏览器打开，传统看图应用通常无法打开。</li>
+<li>原理：把图片进行 base64 编码，形成一串文本。</li>
+<li>如何生成：靠一些工具或网站。</li>
+<li>如何使用：直接作为 img 标签的 src 属性的值即可，并且不受文件位置的影响。</li>
+<li>使用场景：一些较小的图片，或者需要和网页一起加载的图片。</li>
+</ul>
+</li>
+</ol>
+<h2 id="超链接">超链接
+</h2><ul>
+<li>主要作用：从当前页面进行跳转。</li>
+<li>可以实现：
+<ul>
+<li>①跳转到指定页面</li>
+<li>②跳转到指定文件（也可触发下载）</li>
+<li>③跳转到锚点位置</li>
+<li>④唤起指定应用。</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签语义</th>
+          <th>常用属性</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>a</td>
+          <td>超链接</td>
+          <td>href ：指定要跳转到的具体目标。target ：控制跳转时如何打开页面，常用值如下：<br/>_self：在本窗口打开。<br/>_blank：在新窗口打开。<br/>id ：元素的唯一标识，可用于设置锚点。<br/>name：元素的名字，写在a 标签中，也能设置锚点。</td>
+          <td>双</td>
+      </tr>
+  </tbody>
+</table></div>
+<ol>
+<li>
+<p>跳转到页面</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>！--跳转其他网页--＞
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://www.jd.com/&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>去京东<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！--跳转本地网页--＞
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;./10_HTML排版标签.html&#34;</span><span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>去看排版标签<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意点：</p>
+<ol>
+<li>
+<p><strong>代码中的多个空格、多个回车，都会被浏览器解析成一个空格！</strong></p>
+</li>
+<li>
+<p>虽然a是行内元素，但a 元素可以包裹除它自身外的任何元素！
+想展示多个回车或空格，怎么办呢？——后面会讲。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>跳转到文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 浏览器能直接打开的文件 --&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34; ./resource/自拍.jpg&#34;</span><span class="p">&gt;</span>看自拍<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34; ./resource/小电影.mp4&#34;</span><span class="p">&gt;</span>看小电影<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34; ./resource/小姐姐.gif&#34;</span><span class="p">&gt;</span>看小姐姐<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34; ./resource/如何一夜暴富.pdf&#34;</span><span class="p">&gt;</span>点我一夜暴富<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 浏览器不能打开的文件，会自动触发下载 --&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34; ./resource/内部资源.zip&#34;</span><span class="p">&gt;</span>内部资源<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 强制触发下载--&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34; ./resource/小电影.mp4&#34;</span> <span class="na">download</span><span class="o">=</span><span class="s">&#34;电影片段.mp4&#34;</span><span class="p">&gt;</span>下载电影<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意1：若浏览器无法打开文件，则会引导用户下载。
+注意2：若想强制触发下载，请使用 download 属性，属性值即为下载文件的名称。</p>
+</li>
+<li>
+<p>跳转到锚点</p>
+<p>什么是锚点？——网页中的一个标记点。
+具体使用方式：</p>
+<ol>
+<li>
+<p>设置锚点</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 第一种方式：a标签配合name属性--&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;test1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 第二种方式：其他标签配合id属性--&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;test2&#34;</span><span class="p">&gt;</span>我是一个位置<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意点：</p>
+<ol>
+<li>具有 href 属性的 a 标签是超链接，具有 name 属性的 a 标签是锚点。</li>
+<li>name 和 id 都是区分大小写的，且 id 最好别是数字开头。</li>
+</ol>
+</li>
+<li>
+<p>跳转锚点</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 跳转到test1锚点--&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#test1&#34;</span><span class="p">&gt;</span>去test1锚点<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 跳到本页面顶部 --&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>回到顶部<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 跳转到其他页面锚点 --&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;demo.html#test1&#34;</span><span class="p">&gt;</span>去demo.htm1页面的test1锚点<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 刷新本页面 --&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>刷新本页面<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span>！--执行一段js，如果还不知道执行什么，可以留空，javascript：；--&gt;<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:alert（1）；&#34;</span><span class="p">&gt;</span>点我弹窗<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+<li>
+<p>唤起指定应用</p>
+<p>通过a标签，可以唤起设备应用程序。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>！-- 唤起设备拨号 --＞
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;tel:10010&#34;</span><span class="p">&gt;</span>电话联系<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span><span class="err">&lt;</span>！-- 唤起设备发送邮件 --&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:10010@qq.com&#34;</span><span class="p">&gt;</span>邮件联系<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span><span class="err">&lt;</span>！-- 唤起设备发送短信 --&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34; sms:10086&#34;</span><span class="p">&gt;</span>短信联系<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="列表">列表
+</h2><ol>
+<li>
+<p>有序列表</p>
+<p>概念：有顺序或侧重顺序的列表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>要把大象放冰箱总共分几步<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>把冰箱门打开<span class="p">&lt;/</span><span class="nt">1i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">1i</span><span class="p">&gt;</span>把大象放进去<span class="p">&lt;/</span><span class="nt">1i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>把冰箱门关上<span class="p">&lt;/</span><span class="nt">1i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>无序列表</p>
+<p>概念：无顺序或不侧重顺序的列表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>我想去的几个城市<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">1i</span><span class="p">&gt;</span>成都<span class="p">&lt;/</span><span class="nt">1i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>上海<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">1i</span><span class="p">&gt;</span>西安<span class="p">&lt;/</span><span class="nt">1i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>武汉<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>列表嵌套</p>
+<p>概念：列表中的某项内容，又包含一个列表（注意：嵌套时，请务必把解构写完整）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Famous Player<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Manchester City<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    	<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Manchester United<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    	<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Bruno Fernandes<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Amd Diallo<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Andre Onana<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Liverpool<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Tottenham Hotspur<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：li 标签最好写在 ul 或 ol 中，不要单独使用。</p>
+</li>
+<li>
+<p>自定义列表</p>
+<ul>
+<li>概念：所谓自定义列表，就是一个包含术语名称以及术语描述的列表。</li>
+<li>一个 dl 就是一个自定义列表，一个 dt 就是一个术语名称，一个 dd 就是术语描述（可以有多个）。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>如何高效的学习？<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>做好笔记<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>笔记是我们以后复习的一个抓手<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>笔记可以是电子版，也可以是纸质版<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>多加练习<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>只有敲出来的代码，才是自己的<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>别怕出错<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>错很正常，改正后并记住，就是经验<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="表格">表格
+</h2><ol>
+<li>
+<p>基本结构</p>
+<ul>
+<li>
+<p>一个完整的表格由：表格标题、表格头部、表格主体、表格脚注，四部分组成。</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html4.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+</ul>
+</li>
+<li>
+<p>表格涉及到的标签：</p>
+<ul>
+<li>table：表格</li>
+<li>caption ：表格标题</li>
+<li>thead ：表格头部</li>
+<li>tbody：表格主体</li>
+<li>tfoot：表格注脚</li>
+<li>tr：每一行</li>
+<li>th、td：每一个单元格（备注：表格头部中用 th，表格主体、表格脚注中用：td）</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html5.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html6.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>![](<a class="link" href="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/"  target="_blank" rel="noopener"
+    >https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/</a>截屏2025-01-21 00.36.54.png)</p>
+</li>
+<li>
+<p>具体编码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 表格标题--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>学生信息<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 表格头部--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>姓名<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>性别<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>年龄<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>民族<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>政治面貌<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 表格主体--&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>张三<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>18<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>汉族<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>团员<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>李四<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>女<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>20<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>满族<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>群众<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>王五<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>20<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>回族<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>党员<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>赵六<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>女<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">  			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>21<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>壮族<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>团员<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="c">&lt;!-- 表格脚注--&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>共计：4人<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;/</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>常用属性</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签语义</th>
+          <th>常用属性</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>table</td>
+          <td>表格</td>
+          <td>width:设置表格宽度<br>height:设置表格<strong>最小</strong>高度，表格最终高度可能比设置的值大。<br>border：设置表格边框宽度。<br/>cellspacing ：设置单元格之间的间距。</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>thead</td>
+          <td>表格头部</td>
+          <td>height：设置表格头部高度。<br/>align：设置单元格的水平对齐方式，可选值如下：<br/>1. left：左对齐<br/>2. center ：中间对齐<br/>3. right：右对齐<br/>valign：设置单元格的垂直对齐方式，可选值如下：<br/>1. top：顶部对齐<br/>2. middle：中间对齐<br/>3. bottom：底部对齐</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>tbody</td>
+          <td>表格主体</td>
+          <td>常用属性与 thead 相同。</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>tr</td>
+          <td>行</td>
+          <td>常用属性与 thead 相同。</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>tfoot</td>
+          <td>表格脚注</td>
+          <td>常用属性与 thead 相同。</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>td</td>
+          <td>普通单元格</td>
+          <td>width：设置单元格的宽度，同列所有单元格全都受影<br/>heigth：设置单元格的高度，同行所有单元格全都受影响。<br/>align：设置单元格的水平对齐方式。<br/>valign：设置单元格的垂直对齐方式。<br/>rowspan：指定要跨的行数。<br/>colspan：指定要跨的列数。</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>th</td>
+          <td>表头单元格</td>
+          <td></td>
+          <td>双</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>注意点：</p>
+<ol>
+<li>
+<div class="table-wrapper"><table>元素的 border 属性可以控制表格边框，但border 值的大小，并不控制单元格边框的宽度，
+ 只能控制表格最外侧边框的宽度，这个问题如何解决？--后期靠 CSS 控制。
+</li>
+<li>默认情况下，每列的宽度，得看这一列单元格最长的那个文字。</li>
+<li>给某个 th 或 td 设置了宽度之后，他们所在的那一列的宽度就确定了。</li>
+<li>给某个 th 或 td 设置了高度之后，他们所在的那一行的高度就确定了。</li>
+</ol>
+</li>
+<li>
+<p>跨行跨列</p>
+<ul>
+<li>rowspan：指定要跨的行数。</li>
+<li>colspan：指定要跨的列数。</li>
+</ul>
+</li>
+</ol>
+<p>课程表效果：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html7.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>编写思路：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/html8.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="6">
+<li>
+<p>常用标签补充</p>
+<table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签含义</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>br</td>
+          <td>换行</td>
+          <td>单</td>
+      </tr>
+      <tr>
+          <td>hr</td>
+          <td>分隔</td>
+          <td>单</td>
+      </tr>
+      <tr>
+          <td>pre</td>
+          <td>按原文显示（一般用于在页面中嵌入大段代码）</td>
+          <td>双</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>注意点：</p>
+<ol>
+<li>不要用 br 来增加文本之间的行间隔，应使用 p 元素，或后面即将学到的 css中的margin 属性。</li>
+<li>hr 的语义是分隔，如果不想要语义，只是想画一条水平线，那么应当使用css完成。</li>
+</ol>
+</li>
+</ol>
+<h2 id="表单">表单
+</h2><p>概念：一个包含交互的区域，用于收集用户提供的数据。</p>
+<ol>
+<li>基本结构</li>
+</ol>
+<p>简单梳理：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>标签名</th>
+          <th>标签语义</th>
+          <th>常用属性</th>
+          <th>单/双标签</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>form</td>
+          <td>表单</td>
+          <td>action：用于指定表单的提交地址（需要与后端人员沟通后确定）。<br/>target：用于控制表单提交后，如何打开页面，常用值如下：<br/>* -self：在本窗口打开。<br/>* _blank：在新窗口打开。<br/>method：用于控制表单的提交方式，暂时只需了解，在后面Ajax的课程中，会详细讲解。</td>
+          <td>双</td>
+      </tr>
+      <tr>
+          <td>input</td>
+          <td>输入框</td>
+          <td>type：设置输入框的类型，目前用到的值是 text，表示普通文本。<br/>定）。<br/>name ：用于指定提交数据的名字，（需要与后端人员沟通后确任）</td>
+          <td>单</td>
+      </tr>
+      <tr>
+          <td>button</td>
+          <td>按钮</td>
+          <td>本小节暂不涉及</td>
+          <td>双</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>示例代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;https://www.baidu.com/s&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;wd&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>去百度搜索<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>
+<p>常见表单控件</p>
+<ul>
+<li>
+<p>文本输入框</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span><span class="p">&gt;</span> type=&#34;text&#34;&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>常用属性如下：</p>
+<ul>
+<li>name 属性：数据的名称。</li>
+<li>value 属性：输入框的默认输入值。</li>
+<li>maxlength 属性：输入框最大可输入长度。</li>
+</ul>
+</li>
+<li>
+<p>密码输入框</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>常用属性如下：</p>
+<ul>
+<li>
+<p>name 属性：数据的名称。</p>
+</li>
+<li>
+<p>value 属性：输入框的默认输入值（一般不用，无意义）。</p>
+</li>
+<li>
+<p>maxlength 属性：输入框最大可输入长度。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>单选框</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sex&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;female&#34;</span><span class="p">&gt;</span>女
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Red is the right color of Manchester.</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Example Person
+    </section>
+    
+    <section class="powerby">
+        
+            MU Blog - 分享知识与想法 | 让我们一起进步！ <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.792827e77d7f8370f67128f7b2627308cd0fc0f904cb68599da42be10947a225.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

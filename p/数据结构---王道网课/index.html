@@ -642,6 +642,11 @@
         <li><a href="#顶点的度入度出度">顶点的度、入度、出度</a></li>
         <li><a href="#顶点-顶点的关系描述">顶点-顶点的关系描述</a></li>
         <li><a href="#连通图强连通图">连通图、强连通图</a></li>
+        <li><a href="#研究图的局部一一子图">研究图的局部一一子图</a></li>
+        <li><a href="#连通分量">连通分量</a></li>
+        <li><a href="#生成树">生成树</a></li>
+        <li><a href="#边的权带权图网">边的权、带权图/网</a></li>
+        <li><a href="#几种特形态的图">几种特形态的图</a></li>
       </ol>
     </li>
   </ol>
@@ -4704,7 +4709,7 @@ n<sub>0</sub>=n<sub>2</sub>+1 &ndash;&gt; n<sub>0</sub>+n<sub>2</sub>一定是�
 <p>常见考点：
 对于n个顶点的无向图G，
 若G是连通图，则最少有n-1条边
-若G是非连通图，则最多可能有C-1条边</p>
+若G是非连通图，则最多可能有C<sup>2</sup><sub>n-1</sub>条边</p>
 </li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog47.png"
@@ -4715,6 +4720,85 @@ n<sub>0</sub>=n<sub>2</sub>+1 &ndash;&gt; n<sub>0</sub>+n<sub>2</sub>一定是�
 	
 	
 ></p>
+<ul>
+<li>
+<p>若图中任何一对顶点都是强连通的，则称此图为强连通图。</p>
+<p>常见考点：
+对于n个顶点的有向图G，
+若G是强连通图，则最少有n条边（形成回路）</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog48.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="研究图的局部一一子图">研究图的局部一一子图
+</h3><p>设有两个图G=(V, E)和G’=(V’,E’)，若<strong>V’是V的子集</strong>，且<strong>E是E’的子集</strong>，则称G’是G的子图。
+若有满足<strong>V(G’)=V(G)<strong>的子图G&rsquo;，也就是</strong>顶点相同</strong>，则称其为G的<strong>生成子图</strong></p>
+<h3 id="连通分量">连通分量
+</h3><ul>
+<li>无向图中的<strong>极大连通子图</strong>（<strong>子图必须连通，且包含尽可能多的顶点和边</strong>）称<strong>连通分量</strong>。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog52.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li>有向图中的<strong>极大强连通子图</strong>（<strong>子图必须强连通，同时保留尽可能多的边</strong>）称有向图的<strong>强连通分量</strong></li>
+</ul>
+<h3 id="生成树">生成树
+</h3><ul>
+<li>
+<p>连通图的<strong>生成树</strong>是包含图中全部顶点的一个<strong>极小连通子图</strong>（<strong>边尽可能的少，但要保持连通</strong>）。</p>
+<p>若图中顶点数为n，则它的生成树含有<strong>n-1</strong>条边。<strong>对生成树而言，若砍去它的一条边，则会变成非连通图，若加上一条边则会形成一个回路。</strong></p>
+</li>
+<li>
+<p>在非连通图中，连通分量的生成树构成了非连通图的<strong>生成森林</strong>。</p>
+</li>
+</ul>
+<h3 id="边的权带权图网">边的权、带权图/网
+</h3><ul>
+<li><strong>边的权</strong>一一在一个图中，每条边都可以标上具有某种含义的数值，该数值称为该边的权值。</li>
+<li>**带权图/网****一一边上带有权值的图称为带权图，也称网。</li>
+<li><strong>带权路径长度</strong>一一当图是带权图时，一条路径上所有边的权值之和，称为该路径的带权路径长度</li>
+</ul>
+<h3 id="几种特形态的图">几种特形态的图
+</h3><ul>
+<li>
+<p><strong>无向完全图</strong></p>
+<p>无向完全图一一无向图中任意两个顶点之间都存在边
+若无向图的顶点数IVI=n，则IEI ∈ [0, C<sup>2</sup><sub>n</sub>] = [0, n(n-1)/2]</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog53.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p><strong>有向完全图</strong></p>
+<p>有向完全图——有向图中任意两个顶点之间都存在方向相反的两条弧
+若有向图的顶点数IVI=n，则IEI ∈ [0,2C<sup>2</sup><sub>n</sub>] = [0, n(n-1)]</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/blog54.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+</ul>
 
 </section>
 
@@ -4821,7 +4905,7 @@ n<sub>0</sub>=n<sub>2</sub>+1 &ndash;&gt; n<sub>0</sub>+n<sub>2</sub>一定是�
         
             2020 - 
         
-        2024 Example Person
+        2025 Example Person
     </section>
     
     <section class="powerby">
