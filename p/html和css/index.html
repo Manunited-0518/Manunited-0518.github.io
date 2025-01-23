@@ -1498,13 +1498,13 @@
       <tr>
           <td>table</td>
           <td>表格</td>
-          <td>width:设置表格宽度<br>height:设置表格<strong>最小</strong>高度，表格最终高度可能比设置的值大。<br>border：设置表格边框宽度。<br/>cellspacing ：设置单元格之间的间距。</td>
+          <td>width：设置表格宽度。<br/>height：设置表格最小高度，表格最终高度可能比设置的值大。<br/>border：设置表格边框宽度。<br/>cellspacing：设置单元格之间的间距。</td>
           <td>双</td>
       </tr>
       <tr>
           <td>thead</td>
           <td>表格头部</td>
-          <td>height：设置表格头部高度。<br/>align：设置单元格的水平对齐方式，可选值如下：<br/>1. left：左对齐<br/>2. center ：中间对齐<br/>3. right：右对齐<br/>valign：设置单元格的垂直对齐方式，可选值如下：<br/>1. top：顶部对齐<br/>2. middle：中间对齐<br/>3. bottom：底部对齐</td>
+          <td>height：设置表格头部高度。<br/>align：设置单元格的水平对齐方式，可选值如下：<br/>1. left：左对齐<br/>2. center ：中间对齐<br/>3. right ：右对齐<br/>valign：设置单元格的垂直对齐方式，可选值如下：<br/>1. top：顶部对齐<br/>2. middle：中间对齐<br/>3. bottom：底部对齐</td>
           <td>双</td>
       </tr>
       <tr>
@@ -1528,27 +1528,17 @@
       <tr>
           <td>td</td>
           <td>普通单元格</td>
-          <td>width：设置单元格的宽度，同列所有单元格全都受影<br/>heigth：设置单元格的高度，同行所有单元格全都受影响。<br/>align：设置单元格的水平对齐方式。<br/>valign：设置单元格的垂直对齐方式。<br/>rowspan：指定要跨的行数。<br/>colspan：指定要跨的列数。</td>
+          <td>width：设置单元格的宽度，同列所有单元格全都受影响。<br/>heigth：设置单元格的高度，同行所有单元格全都受影响。<br/>align：设置单元格的水平对齐方式。<br/>valign：设置单元格的垂直对齐方式。<br/>rowspan：指定要跨的行数。<br/>colspan：指定要跨的列数。</td>
           <td>双</td>
       </tr>
       <tr>
           <td>th</td>
           <td>表头单元格</td>
-          <td></td>
+          <td>常用属性与 td 相同。</td>
           <td>双</td>
       </tr>
   </tbody>
 </table></div>
-<p>注意点：</p>
-<ol>
-<li>
-<div class="table-wrapper"><table>元素的 border 属性可以控制表格边框，但border 值的大小，并不控制单元格边框的宽度，
- 只能控制表格最外侧边框的宽度，这个问题如何解决？--后期靠 CSS 控制。
-</li>
-<li>默认情况下，每列的宽度，得看这一列单元格最长的那个文字。</li>
-<li>给某个 th 或 td 设置了宽度之后，他们所在的那一列的宽度就确定了。</li>
-<li>给某个 th 或 td 设置了高度之后，他们所在的那一行的高度就确定了。</li>
-</ol>
 </li>
 <li>
 <p>跨行跨列</p>
@@ -1579,7 +1569,7 @@
 <ol start="6">
 <li>
 <p>常用标签补充</p>
-<table>
+<div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>标签名</th>
@@ -1663,12 +1653,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ol start="2">
-<li>
-<p>常见表单控件</p>
+</div><p>2.常见表单控件</p>
 <ul>
-<li>
-<p>文本输入框</p>
+<li>文本输入框</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1678,12 +1666,11 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>常用属性如下：</p>
+<pre><code> * name 属性：数据的名称。
+ * value 属性：输入框的默认输入值。
+ * maxlength 属性：输入框最大可输入长度。
+</code></pre>
 <ul>
-<li>name 属性：数据的名称。</li>
-<li>value 属性：输入框的默认输入值。</li>
-<li>maxlength 属性：输入框最大可输入长度。</li>
-</ul>
-</li>
 <li>
 <p>密码输入框</p>
 <div class="highlight"><div class="chroma">
@@ -1716,13 +1703,17 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sex&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;female&#34;</span><span class="p">&gt;</span>女
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sex&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;male&#34;</span><span class="p">&gt;</span>男
 </span></span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div><p>常用属性如下：</p>
+<ul>
+<li>name 属性：数据的名称，注意：想要单选效果，多个radio 的 name 属性值要保持一致。</li>
+<li>value 属性：提交的数据值。</li>
+<li>checked属性：让该单选按钮默认选中。</li>
 </ul>
 </li>
-</ol>
+</ul>
 
 </section>
 
