@@ -26,10 +26,16 @@
     <loc>http://localhost:1313/posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2024-11-15T16:35:17+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/p/acwing--basic/</loc>
+    <lastmod>2024-11-12T20:43:19+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/p/html%E5%92%8Ccss/</loc>
     <lastmod>2024-11-12T20:43:19+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/mark-down%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2024-11-12T20:43:19+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/mysql/</loc>
     <lastmod>2024-11-12T20:43:19+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
