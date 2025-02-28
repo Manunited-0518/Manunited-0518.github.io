@@ -354,6 +354,7 @@
         <li><a href="#离散化整数">离散化（整数）</a>
           <ol>
             <li><a href="#例题区间和">例题（区间和）</a></li>
+            <li><a href="#迭代器iterator的使用方法">迭代器（Iterator）的使用方法</a></li>
           </ol>
         </li>
         <li><a href="#区间合并">区间合并</a>
@@ -1703,13 +1704,13 @@ else r = mid - 1  (减);</p>
 ></p>
 <p><strong>最长连续不重复子序列</strong></p>
 <p>给定一个长度为n的整数序列，请找出最长的不包含重复数字的连续子序列，输出它的长度。</p>
-<p><strong>输入格式</strong>
-第一行包含整数n。
+<p><strong>输入格式</strong></p>
+<p>第一行包含整数n。
 第二行包含n个婺数（均在0~100000范围内），表示婺数序列。</p>
-<p><strong>输出格式</strong>
-共一行，包含一个整数，表示最长的不包含重复数字的连续子序列的长度。</p>
-<p><strong>数据范围</strong>
-1≤n≤ 100000</p>
+<p><strong>输出格式</strong></p>
+<p>共一行，包含一个整数，表示最长的不包含重复数字的连续子序列的长度。</p>
+<p><strong>数据范围</strong></p>
+<p>1 ≤ n ≤ 10<sup>5</sup></p>
 <p><strong>暴力做法</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1731,7 +1732,7 @@ else r = mid - 1  (减);</p>
 </div>
 </div><p><strong>优化做法</strong></p>
 <ul>
-<li>思路：因为j不可能向前移动，所以不必两重循环，只需循环i，判断j是否需要向后移动即可</li>
+<li>思路：因为 j 不可能向前移动，所以不必两重循环，只需循环 i，判断 j 是否需要向后移动即可</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1752,7 +1753,7 @@ else r = mid - 1  (减);</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>至于check函数，可以引入一个数组s[N]，动态记录每个数出现了多少次</li>
+<li>至于 check 函数，可以引入一个数组 s[N]，动态记录每个数出现了多少次</li>
 </ul>
 <h4 id="完整做法">完整做法
 </h4><div class="highlight"><div class="chroma">
@@ -1793,7 +1794,7 @@ else r = mid - 1  (减);</p>
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span><span class="o">=</span><span class="mi">100010</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100010</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
@@ -1804,12 +1805,12 @@ else r = mid - 1  (减);</p>
 </span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="n">s</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">s</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">--</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="n">j</span> <span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    
@@ -1826,7 +1827,7 @@ else r = mid - 1  (减);</p>
 </ul>
 <h4 id="双指针算法思路">双指针算法思路
 </h4><ul>
-<li>先写一个暴力算法，看一下i和j之间有什么单调关系，利用这种单调关系和模版，来使数量级从n<sup>2</sup>到n。</li>
+<li>先写一个暴力算法，看一下 i 和 j 之间有什么单调关系，利用这种单调关系和模版，来使数量级从 n<sup>2</sup> 到 n。</li>
 </ul>
 <h3 id="位运算">位运算
 </h3><ul>
@@ -1870,17 +1871,15 @@ else r = mid - 1  (减);</p>
 <p>第一行包含整数n。</p>
 <p>第二行包含n个整数，表示整个数列。</p>
 <p><strong>输出格式</strong></p>
-<p>共一行，包含n个整数，其中的第i个数表示数列中的第i个数的二进制表示中1的个数。</p>
-<p>**</p>
+<p>共一行，包含n 个整数，其中的第i个数表示数列中的第i个数的二进制表示中1的个数。</p>
 <p><strong>数据范围</strong></p>
-<p>1≤n≤ 100000，</p>
-<p>0≤ 数列中元素的值≤10<sup>9</sup></p>
-<p>**</p>
+<p>1 ≤ n ≤ 100000</p>
+<p>0 ≤ 数列中元素的值 ≤ 10<sup>9</sup></p>
 <p><strong>输入样例：</strong></p>
 <p>5</p>
-<p>12345</p>
+<p>1 2 3 4 5</p>
 <p><strong>输出样例：</strong></p>
-<p>11212</p>
+<p>1 1 2 1 2</p>
 <p><strong>代码示例：</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1905,6 +1904,8 @@ else r = mid - 1  (减);</p>
 </span><span class="lnt">19
 </span><span class="lnt">20
 </span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
@@ -1927,45 +1928,34 @@ else r = mid - 1  (减);</p>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="n">x</span><span class="o">-=</span> <span class="n">lowbit</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">res</span> <span class="o">++</span> <span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="离散化整数">离散化（整数）
 </h3><ul>
-<li>
-<p>基本问题：存在一组数，值域很大，但是个数很少，把这一组数映射到从0&ndash;n中，就是离散化</p>
-</li>
-<li>
-<p>难点：</p>
-<ul>
-<li>
-<p>可能有重复元素，<strong>去重</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
-</div>
-</div></li>
+<li>基本问题：存在一组数，值域很大，但是个数很少，把这一组数映射到从 0 开始的自然数中，就是离散化</li>
 </ul>
-<p>vector<int> alls;// 存储所有待离散化的值
-sort(alls.begin(), alls.endO);// 将所有值排序
-alls.erase(unique(alls.begin(), alls.end()), alls.end());// 去掉重复元素</p>
+<p><strong>难点：</strong></p>
+<ul>
+<li>可能有重复元素&mdash;<strong>去重</strong></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">* 如何算出x离散化的值---**二分**
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">alls</span><span class="p">;</span><span class="c1">// 存储所有待离散化的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">sort</span><span class="p">(</span><span class="n">alls</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">alls</span><span class="p">.</span><span class="n">endO</span><span class="p">);</span><span class="c1">// 将所有值排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">alls</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">alls</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">()),</span> <span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="c1">// 去掉重复元素
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div><p><strong>unique</strong>会把数组中所有重复的值放到最后，并返回去重后数组的最后一个下标</p>
+<ul>
+<li>如何算出x离散化的值&mdash;<strong>二分</strong></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1994,30 +1984,30 @@ alls.erase(unique(alls.begin(), alls.end()), alls.end());// 去掉重复元素</
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="例题区间和">例题（区间和）
-</h4><p>假定有一个无限长的数轴，数轴上每个坐标上的数都是0。
-现在，我们首先进行 n次操作，每次操作将某一位置x上的数加c。
-近下来，进行 m次询问，每个询问包含两个整数 l 和 r ，你需要求出在区间 [ l,r ] 之间的所有数的和。</p>
-<p><strong>输入格式</strong>
-第一行包含两个整数 n 和 m 。
-接下来 n 行，每行包含两个整数 x 和 c 。
-再接下里 m 行，每行包含两个整数 l 和 r。</p>
-<p><strong>输出格式</strong>
-共m行，每行输出一个询问中所求的区间内数字和。</p>
-<p><strong>数据范围</strong>
--10<sup>9</sup> ≤ x ≤ 10<sup>9</sup>
+</h4><p>假定有一个无限长的数轴，数轴上每个坐标上的数都是 0。</p>
+<p>现在，我们首先进行 n 次操作，每次操作将某一位置 x 上的数加 c。</p>
+<p>近下来，进行 m 次询问，每个询问包含两个整数 l 和 r ，你需要求出在区间 [ l,r ] 之间的所有数的和。</p>
+<p><strong>输入格式</strong></p>
+<p>第一行包含两个整数 n 和 m 。</p>
+<p>接下来 n 行，每行包含两个整数 x 和 c 。</p>
+<p>再接下里 m 行，每行包含两个整数 l 和 r。</p>
+<p><strong>输出格式</strong></p>
+<p>共m行，每行输出一个询问中所求的区间内数字和。</p>
+<p><strong>数据范围</strong></p>
+<p>-10<sup>9</sup> ≤ x ≤ 10<sup>9</sup>
 1 ≤ n , m ≤ 10<sup>5</sup>
 -10<sup>9</sup>≤ l ≤ r ≤ 10<sup>9</sup>
 -10000 ≤ c ≤ 10000</p>
-<p><strong>输入样例：</strong>
-3 3
-1 2
-3 6
-7 5
-1 3
-4 6
-7 8
-<strong>输出样例：</strong>
-8</p>
+<p><strong>输入样例：</strong></p>
+<p>3 3</p>
+<p>1 2</p>
+<p>3 6</p>
+<p>7 5</p>
+<p>1 3</p>
+<p>4 6</p>
+<p>7 8</p>
+<p><strong>输出样例：</strong></p>
+<p>8</p>
 <p>0</p>
 <p>5</p>
 <ul>
@@ -2093,7 +2083,6 @@ alls.erase(unique(alls.begin(), alls.end()), alls.end());// 去掉重复元素</
 </span><span class="lnt">65
 </span><span class="lnt">66
 </span><span class="lnt">67
-</span><span class="lnt">68
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
@@ -2104,7 +2093,7 @@ alls.erase(unique(alls.begin(), alls.end()), alls.end());// 去掉重复元素</
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">300010</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">PII</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span> <span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span>  <span class="n">PII</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
@@ -2112,57 +2101,56 @@ alls.erase(unique(alls.begin(), alls.end()), alls.end());// 去掉重复元素</
 </span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">alls</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;</span> <span class="n">add</span><span class="p">,</span> <span class="n">query</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">find</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="n">alls</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">alls</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">x</span><span class="p">)</span> <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">alls</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">alls</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">x</span><span class="p">)</span> <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">add</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="p">});</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  <span class="n">alls</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">&gt;&gt;</span> <span class="n">r</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">query</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">});</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  <span class="n">alls</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="n">alls</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//去重
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="n">sort</span><span class="p">(</span><span class="n">allls</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl"><span class="n">alls</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">alls</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">()),</span> <span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//处理插入
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">item</span> <span class="p">:</span> <span class="n">add</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//预处理前缀和
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">alls</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//处理询问
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">item</span> <span class="p">:</span> <span class="n">query</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">),</span> <span class="n">r</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">-</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">add</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">alls</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">&gt;&gt;</span> <span class="n">r</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">query</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">alls</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alls</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">sort</span><span class="p">(</span><span class="n">alls</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">alls</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">alls</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">()),</span> <span class="n">alls</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">item</span> <span class="p">:</span> <span class="n">add</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">alls</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">item</span> <span class="p">:</span> <span class="n">query</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">),</span> <span class="n">r</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">-</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -2197,10 +2185,8 @@ alls.erase(unique(alls.begin(), alls.end()), alls.end());// 去掉重复元素</
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>
-<p>迭代器（Iterator）的使用方法</p>
-<p>在C++中，迭代器（Iterator）是一种访问容器元素的方式，它能够遍历容器（如vector、list、map等）中的元素，而不需要知道容器的内部实现。下面是一些常见的迭代器使用方法：</p>
+</div><h4 id="迭代器iterator的使用方法">迭代器（Iterator）的使用方法
+</h4><p>在C++中，迭代器（Iterator）是一种访问容器元素的方式，它能够遍历容器（如vector、list、map等）中的元素，而不需要知道容器的内部实现。下面是一些常见的迭代器使用方法：</p>
 <ol>
 <li>基本用法</li>
 </ol>
@@ -2395,8 +2381,6 @@ alls.erase(unique(alls.begin(), alls.end()), alls.end());// 去掉重复元素</
 <p>​	3.	使用rbegin()和rend()进行反向遍历。</p>
 <p>​	4.	const_iterator保证容器元素不可修改。</p>
 <p>​	5.	C++11引入的范围for提供了更简洁的遍历方式。</p>
-</li>
-</ul>
 <h3 id="区间合并">区间合并
 </h3><ul>
 <li>基本问题：把有交集的区间合并（有端点相交也合并）</li>
