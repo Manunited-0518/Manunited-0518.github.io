@@ -354,13 +354,9 @@
     <li><a href="#前缀和">前缀和</a>
       <ol>
         <li><a href="#一维前缀和">一维前缀和</a></li>
-        <li><a href="#例题-4">例题</a></li>
-        <li><a href="#二维前缀和">二维前缀和</a>
-          <ol>
-            <li><a href="#两个问题">两个问题</a></li>
-          </ol>
-        </li>
-        <li><a href="#子矩阵的和">子矩阵的和</a>
+        <li><a href="#例题-前缀和">例题 (前缀和)</a></li>
+        <li><a href="#二维前缀和">二维前缀和</a></li>
+        <li><a href="#例题-子矩阵的和">例题 (子矩阵的和)</a>
           <ol>
             <li><a href="#输入格式">输入格式</a></li>
             <li><a href="#输出格式">输出格式</a></li>
@@ -374,8 +370,7 @@
     </li>
     <li><a href="#差分">差分</a>
       <ol>
-        <li><a href="#定义">定义</a></li>
-        <li><a href="#差分例题">差分例题</a>
+        <li><a href="#例题差分">例题(差分)</a>
           <ol>
             <li><a href="#输入格式-1">输入格式</a></li>
             <li><a href="#输出格式-1">输出格式</a></li>
@@ -406,7 +401,7 @@
         <li><a href="#第一类两个指针指向两个序列">第一类：两个指针指向两个序列</a></li>
         <li><a href="#第二类两个指针指向一个序列">第二类：两个指针指向一个序列</a></li>
         <li><a href="#通用模版">通用模版</a></li>
-        <li><a href="#例题-5">例题</a>
+        <li><a href="#例题-4">例题</a>
           <ol>
             <li><a href="#完整做法">完整做法</a></li>
             <li><a href="#双指针算法思路">双指针算法思路</a></li>
@@ -436,7 +431,7 @@
         <li><a href="#逆序对的数量">逆序对的数量</a></li>
         <li><a href="#数的三次方根-1">数的三次方根</a></li>
         <li><a href="#前缀和-1">前缀和</a></li>
-        <li><a href="#子矩阵的和-1">子矩阵的和</a></li>
+        <li><a href="#子矩阵的和">子矩阵的和</a></li>
         <li><a href="#差分-1">差分</a></li>
         <li><a href="#差分矩阵-1">差分矩阵</a></li>
       </ol>
@@ -477,7 +472,7 @@
     </li>
     <li><a href="#trie树">Trie树</a>
       <ol>
-        <li><a href="#例题-6">例题</a></li>
+        <li><a href="#例题-5">例题</a></li>
       </ol>
     </li>
     <li><a href="#并查集">并查集</a>
@@ -589,7 +584,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 41 分钟
+                    阅读时长: 43 分钟
                 </time>
             </div>
         
@@ -2244,7 +2239,64 @@ else r = mid - 1  (减);</p>
 <p><strong>公式：S[i , j] = S[i - 1, j] + S[i, j - 1] - S[i - 1, j - 1] + a[i , j]</strong></p>
 </li>
 </ul>
-<h3 id="例题-4">例题
+<p><strong>具体做法：</strong></p>
+<p>首先做一个预处理，定义一个sum [ ] 数组，sum [ i ] 代表 a 数组中前 i 个数的和。</p>
+<p><strong>求前缀和运算：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mf">1e5</span><span class="o">+</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">sum</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">];</span> <span class="c1">//sum[i] = a[1] + a[2] + a[3] ..... a[i];
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">sum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sum</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>   
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>然后查询操作：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"> <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">l</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">sum</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">-</span> <span class="n">sum</span><span class="p">[</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>对于每次查询，只需执行sum[r] - sum[l - 1] ，时间复杂度为O(1)</p>
+<p><strong>原理</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">sum</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">......</span> <span class="n">a</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">sum</span><span class="p">[</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">sum</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">-</span> <span class="n">sum</span><span class="p">[</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">......</span><span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>图解</strong></p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_3d34e346d2-20201213222213524-2.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>这样，对于每个询问，只需要执行 sum[r]-sum[l-1]。输出原序列中从第l个数到第r个数的和的时间复杂度变成了O(1)。</p>
+<p>我们把它叫做<strong>一维前缀和。</strong></p>
+<h3 id="例题-前缀和">例题 (前缀和)
 </h3><p>输入一个长度为 n 的整数序列。</p>
 <p>接下来再输入 m 个询问，每个询问输入一对！，「。</p>
 <p>对于每个询问，输出原序列中从第1 个数到第r个数的和。</p>
@@ -2326,8 +2378,8 @@ else r = mid - 1  (减);</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="二维前缀和">二维前缀和
-</h3><h4 id="两个问题">两个问题
-</h4><ul>
+</h3><p><strong>两个问题</strong></p>
+<ul>
 <li>
 <p>s [i , j]  如何计算？</p>
 <p><strong>公式：S[i , j] = S[i - 1, j] + S[i, j - 1] - S[i - 1, j - 1] + a[i , j]</strong></p>
@@ -2337,7 +2389,59 @@ else r = mid - 1  (减);</p>
 <p><strong>公式：S[x2, y2] - S[x1 - 1, y2] - S[x2, y1 - 1] + S[x1 - 1, y1 - 1]</strong></p>
 </li>
 </ul>
-<h3 id="子矩阵的和">子矩阵的和
+<p>如图：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_c9a2bee0d2-20201217174700577.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>紫色面积是指 (1,1) 左上角到 (i, j - 1) 右下角的矩形面积, 绿色面积是指 (1,1) 左上角到 ( i - 1, j ) 右下角的矩形面积。每一个颜色的矩形面积都代表了它所包围元素的和。</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_d9329a0dd2-20201216215336857.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>从图中我们很容易看出，整个外围蓝色矩形面积 s [i] [j] = 绿色面积s [i-1] [j] + 紫色面积 s [i] [j-1] - 重复加的红色的面积s [i-1] [j-1] + 小方块的面积a [i] [j];</p>
+<p>因此得出<strong>二维前缀和预处理公式</strong></p>
+<p>s[i] [j] = s [i-1] [j] + s [i] [j-1 ] + a[i] [j] - s [i-1] [ j-1]</p>
+<p>接下来回归问题去求以 ( x1, y1 ) 为左上角和以 ( x2, y2 ) 为右下角的矩阵的元素的和。</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_e76d64f1d2-2020121717473287.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><strong>紫色面积</strong>是指 ( 1,1 )左上角到 (x1-1,y2) 右下角的矩形面积 ，<strong>黄色面积</strong>是指 (1,1) 左上角到(x2,y1-1)右下角的矩形面积；</p>
+<p>不难推出：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_f973f889d2-20201217170800381.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>绿色矩形的面积 = 整个外围面积s[x2, y2] - 黄色面积s[x2, y1 - 1] - 紫色面积s[x1 - 1, y2] + 重复减去的红色面积 s[x1 - 1, y1 - 1]</p>
+<p>因此二维前缀和的结论为：</p>
+<p>以(x1, y1)为左上角，(x2, y2)为右下角的子矩阵的和为：
+s[x2, y2] - s[x1 - 1, y2] - s[x2, y1 - 1] + s[x1 - 1, y1 - 1]</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_067abec1d2-20201217174751639.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="例题-子矩阵的和">例题 (子矩阵的和)
 </h3><p>输入一个 n 行 m 列的整数矩阵，再输入 q 个询问，每个询问包含四个整数 x1,y1,x2,y2，表示一个子矩阵的左上角坐标和右下角坐标。</p>
 <p>对于每个询问输出子矩阵中所有数的和。</p>
 <h4 id="输入格式">输入格式
@@ -2454,13 +2558,52 @@ else r = mid - 1  (减);</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="差分">差分
-</h2><p>相当于前缀和的逆运算</p>
-<h3 id="定义">定义
-</h3><p>存在两个数组 a<sub>1</sub>, a<sub>2</sub> &hellip; &hellip; a<sub>n</sub> ， b<sub>1</sub>, b<sub>2</sub> &hellip; &hellip; b<sub>n</sub></p>
-<p>使得  a<sub>i</sub> =  b<sub>1</sub>+ b<sub>2</sub> &hellip; &hellip; + b<sub>n</sub></p>
-<p>则 b 就是 a 的前缀和</p>
-<p><strong>差分适用于这样的问题：在一个区间内，每个数都加上一个常数</strong></p>
-<h3 id="差分例题">差分例题
+</h2><p>类似于数学中的求导和积分，差分可以看成前缀和的逆运算。</p>
+<p><strong>差分适用于这样的问题：在一个区间内，每个数都加上一个数</strong></p>
+<p><strong>差分数组：</strong></p>
+<p>首先给定一个原数组 a：a[1], a[2], a[3]&hellip; &hellip;a[n];</p>
+<p>然后我们构造一个数组 b ： b[1] ,b[2] , b[3]&hellip; &hellip; b[i];</p>
+<p>使得 a[i] = b[1] + b[2 ]+ b[3] + &hellip; &hellip; + b[i]</p>
+<p>也就是说，a 数组是 b 数组的前缀和数组，反过来我们把 b 数组叫做 a 数组的差分数组。换句话说，每一个 a[i] 都是 b 数组中从头开始的一段区间和。</p>
+<p>考虑如何构造差分 b 数组？</p>
+<p>最为直接的方法</p>
+<p>如下：</p>
+<p>a[0 ]= 0;</p>
+<p>b[1] = a[1] - a[0];</p>
+<p>b[2] = a[2] - a[1];</p>
+<p>b[3] =a [3] - a[2];</p>
+<p>&hellip;&hellip;..</p>
+<p>b[n] = a[n] - a[n-1];</p>
+<p>图示:</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_1e2c1a36d2-20201217170336254.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>我们只要有b数组，通过前缀和运算，就可以在O(n) 的时间内得到a数组 。</p>
+<p>知道了差分数组有什么用呢？ 别着急，慢慢往下看。</p>
+<p><strong>话说有这么一个问题：</strong></p>
+<p>给定区间 [l ,r ]，让我们把a数组中的 [l, r] 区间中的每一个数都加上 c, 即 a[l] + c , a[l+1] + c , a[l+2] + c &hellip; &hellip; a[r] + c;</p>
+<p><strong>暴力做法</strong>是 for 循环 l 到 r 区间，时间复杂度 O ( n )，如果我们需要对原数组执行 m 次这样的操作，时间复杂度就会变成 O (n*m)。有没有更高效的做法吗? 考虑差分做法。</p>
+<p>始终要记得，a数组是b数组的前缀和数组，比如对b数组的b[i]的修改，会影响到a数组中从a[i]及往后的每一个数。</p>
+<p>首先让差分b数组中的 b[l] + c ,a数组变成 a[l] + c ,a[l+1] + c,,,,,, a[n] + c;</p>
+<p>然后我们打个补丁，b[r+1] - c, a数组变成 a[r+1] - c,a[r+2] - c,,,,,,,a[n] - c;</p>
+<p>为啥还要打个补丁？</p>
+<p>我们画个图理解一下这个公式的由来:</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/29688_1e2c1a36d2-20201217170336254.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>b[l] + c，效果使得 a 数组中 a[l]及以后的数都加上了c(红色部分)，但我们只要求 l 到 r 区间加上 c, 因此还需要执行 b[r+1] - c,让a数组中a[r+1]及往后的区间再减去c(绿色部分)，这样对于a[r] 以后区间的数相当于没有发生改变。</p>
+<p>因此我们得出一维差分结论：给a数组中的[ l, r]区间中的每一个数都加上c,只需对差分数组b做 b[l] + = c, b[r+1] - = c。时间复杂度为O(1), 大大提高了效率。</p>
+<h3 id="例题差分">例题(差分)
 </h3><p>输入一个长度为 n 的整数序列。</p>
 <p>接下来输入 m 个操作，每个操作包含三个整数 l,r,c，表示将序列中 [l,r] 之间的每个数加上 c。</p>
 <p>请你输出进行完所有操作后的序列。</p>
@@ -2879,7 +3022,7 @@ else r = mid - 1  (减);</p>
 </div><p>可以将以上算法(O(n<sup>2</sup>))优化到n</p>
 </li>
 </ul>
-<h3 id="例题-5">例题
+<h3 id="例题-4">例题
 </h3><p><strong>最长连续不重复子序列</strong></p>
 <p>给定一个长度为n的整数序列，请找出最长的不包含重复数字的连续子序列，输出它的长度。</p>
 <p><strong>输入格式</strong></p>
@@ -3848,7 +3991,7 @@ else r = mid - 1  (减);</p>
 </ul>
 <h3 id="数的三次方根-1">数的三次方根
 </h3><h3 id="前缀和-1">前缀和
-</h3><h3 id="子矩阵的和-1">子矩阵的和
+</h3><h3 id="子矩阵的和">子矩阵的和
 </h3><h3 id="差分-1">差分
 </h3><h3 id="差分矩阵-1">差分矩阵
 </h3><h1 id="数据结构">数据结构
@@ -4905,7 +5048,31 @@ else r = mid - 1  (减);</p>
 <li>可以用 O(1) 时间从队头/队尾取出最值</li>
 </ul>
 <h2 id="kmp">KMP
-</h2><h4 id="kmp字符串">KMP字符串
+</h2><p>KMP 用于字符串匹配问题中</p>
+<p>字符串匹配问题中，给出两个字符串 text 和 pattern (本题中 text 为 S, pattern 为 P)，需要判断 pattern 是否是 text 的子串。一般把 text 称为文本串，pattern 称为模式串。<strong>暴力的解法</strong>为：
+枚举文本串 text 的起始位置 i ，然后从该位开始逐位与模式串 pattern 进行匹配。如果匹配过程中每一位都相同，则匹配成功；否则，只要出现某位不同，就让文本串 text 的起始位置变为 i + 1，并从头开始模式串 pattern 的匹配。假设 m 为文本串的长度，n 为模式串的长度。时间复杂度为 O(n m)。显然，当 n 和 m 都达到 10<sup>5</sup> 级别时无法承受。</p>
+<p><strong>偶遇 next</strong></p>
+<p>面对 KMP 这种复杂的算法，我们必须要将其拆解，逐个击破。假设有一个字符串 s (下标从 0 开始)，那么它以 i 号位作为结尾的子串就是 s[0…i]。对该子串来说，长度为 k + 1 的前缀与后缀分别是 s[0…k] 与 s[i-k…i]。我们构造一个 int 型数组（叫啥无所谓，就叫它 next吧）。其中，next[i] 表示使字串 s[0…i] 中前缀 s[0…k] 等于后缀 s[i-k…i] 的最大的 k。（注意相等的前缀、后缀在原字串中不能是 s[0…i] 本身。这点很重要，在后面感性分析时会用到）；如果找不到相等的前后缀，就令 next[i] = -1。显然，next[i] 就是所求最长相等前后缀中前缀的最后一位的下标。</p>
+<p>接下来通过一个例子，给出 next 数组的变化过程。s = “abababc”。对每个 next[i] 的计算都给出两种阅读方式。建议先看一下第一种并搞清楚第二种。</p>
+<p>第一种方法直接画线画出子串 s[0…i] 的最长相等前后缀：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/175110_7972a32fbf-ac831a.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>第二种方法在上部给出后缀，下部给出前缀，再将相等的最长前后缀框起来。</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/175110_88f530cabf-ac831b.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="kmp字符串">KMP字符串
 </h4><p>给定一个模式串S，以及一个模板串P，所有字符串中只包含大小写英文字母以及阿拉伯数字。
 模板串P在模式串S中多次作为子串出现。
 求出模板串P在模式串S中所有出现的位置的起始下标。</p>
@@ -5003,7 +5170,7 @@ ababa</p>
 </div>
 </div><h2 id="trie树">Trie树
 </h2><p>高效地存储和查找字符串集合的数据结构</p>
-<h3 id="例题-6">例题
+<h3 id="例题-5">例题
 </h3><p>维护一个字符串集合，支持两种操作：</p>
 <ul>
 <li>
