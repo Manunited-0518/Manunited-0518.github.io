@@ -585,6 +585,17 @@
             <li><a href="#代码示例-5">代码示例</a></li>
           </ol>
         </li>
+        <li><a href="#bellman_ford算法">bellman_ford算法</a>
+          <ol>
+            <li><a href="#输入格式-9">输入格式</a></li>
+            <li><a href="#输出格式-9">输出格式</a></li>
+            <li><a href="#数据范围-9">数据范围</a></li>
+            <li><a href="#输入样例-9">输入样例：</a></li>
+            <li><a href="#输出样例-9">输出样例：</a></li>
+            <li><a href="#算法思路-1">算法思路</a></li>
+            <li><a href="#代码示例-6">代码示例</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -649,7 +660,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 64 分钟
+                    阅读时长: 66 分钟
                 </time>
             </div>
         
@@ -7621,7 +7632,225 @@ dg[i + r] 表示 r 行 i 列处，所在的对角线上有没有棋子，udg[n -
 </div>
 </div><p><strong>为什么前面初始化的是3f，后面变成检查3f3f33f3f了？</strong></p>
 <p>memset 是按字节更改内存，memset(a, 0x3f, sizeof a): a 的每一个字节都是 0x3f, int 取4个字节，所以是 0x3f3f3f3f，他的值是0x3f3f3f3f</p>
-<h1 id="数学知识">数学知识
+<h3 id="bellman_ford算法">bellman_ford算法
+</h3><p>给定一个 n 个点 m 条边的有向图，图中可能存在重边和自环， <strong>边权可能为负数</strong>。</p>
+<p>请你求出从 1 号点到 n 号点的最多经过 k 条边的最短距离，如果无法从 1 号点走到 n 号点，输出 <code>impossible</code>。</p>
+<p>注意：图中可能 <strong>存在负权回路</strong> 。</p>
+<h4 id="输入格式-9">输入格式
+</h4><p>第一行包含三个整数 n, m, k。</p>
+<p>接下来 m 行，每行包含三个整数 x, y, z，表示存在一条从点 x 到点 y 的有向边，边长为 z。</p>
+<p>点的编号为 1∼n。</p>
+<h4 id="输出格式-9">输出格式
+</h4><p>输出一个整数，表示从 1 号点到 n 号点的最多经过 k 条边的最短距离。</p>
+<p>如果不存在满足条件的路径，则输出 <code>impossible</code>。</p>
+<h4 id="数据范围-9">数据范围
+</h4><p>1 ≤ n, k ≤ 500,
+1 ≤ m ≤ 10000,
+1 ≤ x, y ≤ n，
+任意边长的绝对值不超过 10000。</p>
+<h4 id="输入样例-9">输入样例：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="mi">3</span> <span class="mi">3</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span> <span class="mi">3</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="mi">3</span> <span class="mi">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="输出样例-9">输出样例：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="mi">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="算法思路-1">算法思路
+</h4><p><strong>所用的数据结构</strong></p>
+<p>dist [N] 表示从起点到当前点的当前最短距离</p>
+<p>backup [ j ] 表示每次进入第 2 重循环的 dist 数组的备份</p>
+<p><strong>算法步骤</strong></p>
+<p>0.初始化 dist 数组为正无穷，dist [1] = 0;</p>
+<p>1.（外重循环）循环 i 从 1 到 n，遍历 n 次指的是：<strong>是不经过 i 条边到达终点的最短距离</strong></p>
+<p>经过 n 次操作 n 个点的最短距离也就确定了；</p>
+<p>2.（内重循环）循环 j 从 1 到 m，遍历 m 条边，把所有边都进行<strong>松弛操作</strong>；</p>
+<p>每次取出两点以及他们连接的边的权重（a, b, w 表示 a—&gt;b 的一条边）；</p>
+<p>用从起点到 a 的当前最短距离 + 权重来更新从起点到 b 的当前最短距离；
+dist [b] = min (dist [b], dist [a] + w);</p>
+<p>3.返回答案；</p>
+<p>为什么跑完算法就能算出最短距离呢</p>
+<p>因为第二重循环遍历了m条边，每条都被遍历了n次；</p>
+<p>所以这n个点的所有他的前驱后继相对应的边权一定都被遍历到了</p>
+<p>又因为他是有<strong>松弛操作</strong>的，所以只要上一个点（前驱）的当前最短路求出来了</p>
+<p>这个点就可以用他的前驱来更新他的最短距离，从而他的后继又可以用它来更新最短距离了</p>
+<p><strong>backup干啥使的</strong></p>
+<p>backup[j]表示每次进入第2重循环的dist数组的备份。
+如果不加这个备份的话有可能会发生节点最短距离的串连；
+比如说：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/bellman1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>现在从 3 号结点走到 4 号节点要想进行松弛操作就必须先得到 dist[3]，要想得到 dist[3] 就得知道 dist[2]；
+dist[2] = 2，现在 dist[3] 是正无穷，用 2 号结点来更新 3 号结点，dist[3]=2+3=5;</p>
+<p>现在要更新dist[4]了，此时dist[4]=正无穷</p>
+<p><strong>出现问题了，dist[4]是用dist[3]是用正无穷来更新还是5呢</strong></p>
+<p>用dist[3]=5来更新那是下一次i迭代的事情；
+这道题说是不经过k条边，说不定下一次就到k条边了，所以还是得用正无穷来更新的</p>
+<p><strong>第3步的细节</strong></p>
+<p>怎么返回呢还是这样吗？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">==</span><span class="mh">0x3f3f3f3f</span><span class="p">)</span><span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="k">return</span> <span class="n">dist</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>为什么是dist[n]&gt;0x3f3f3f3f/2， 而不是dist[n]&gt;0x3f3f3f3f</strong></p>
+<p>5号节点距离起点的距离是无穷大，利用5号节点更新n号节点距离起点的距离，将得到109−2, 虽然小于109, 但并不存在最短路，(在边数限制在k条的条件下)。</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/bellman4.PNG"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>所以就直接这样写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">&gt;=</span><span class="mh">0x3f3f3f3f</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="k">return</span> <span class="n">dist</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="代码示例-6">代码示例
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">510</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">10010</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">dict</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">backup</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">edge</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">Edge</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">bellman_ford</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">memset</span><span class="p">(</span><span class="n">dict</span><span class="p">,</span> <span class="mh">0x3f</span><span class="p">,</span> <span class="k">sizeof</span> <span class="n">dict</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dict</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">memcpy</span><span class="p">(</span><span class="n">backup</span><span class="p">,</span> <span class="n">dict</span><span class="p">,</span> <span class="k">sizeof</span> <span class="n">dict</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">j</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">b</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dict</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dict</span><span class="p">[</span><span class="n">b</span><span class="p">],</span> <span class="n">backup</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">+</span> <span class="n">w</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dict</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">bellman_ford</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">&gt;</span> <span class="mh">0x3f3f3f3f</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;impossible&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="数学知识">数学知识
 </h1><h1 id="动态规划">动态规划
 </h1><h1 id="贪心算法">贪心算法
 </h1><h1 id="时空复杂度分析">时空复杂度分析
