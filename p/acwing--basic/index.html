@@ -645,6 +645,16 @@
             <li><a href="#代码示例-10">代码示例</a></li>
           </ol>
         </li>
+        <li><a href="#二分图">二分图</a>
+          <ol>
+            <li><a href="#输入格式-14">输入格式</a></li>
+            <li><a href="#输出格式-14">输出格式</a></li>
+            <li><a href="#数据范围-14">数据范围</a></li>
+            <li><a href="#输入样例-14">输入样例：</a></li>
+            <li><a href="#输出样例-14">输出样例：</a></li>
+            <li><a href="#算法思想-6">算法思想</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -8375,7 +8385,9 @@ dist[2] = 2，现在 dist[3] 是正无穷，用 2 号结点来更新 3 号结点
 <li>k, i, j 去更新d</li>
 </ul>
 <h2 id="最小生成树">最小生成树
-</h2><h3 id="prim-算法">Prim 算法
+</h2><p>![](<a class="link" href="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/"  target="_blank" rel="noopener"
+    >https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/</a>截屏2025-03-16 18.08.40.png)</p>
+<h3 id="prim-算法">Prim 算法
 </h3><p>给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环，边权可能为负数。</p>
 <p>求最小生成树的树边权重之和，如果最小生成树不存在则输出 <code>impossible</code>。</p>
 <p>给定一张边带权的无向图 G=(V,E)，其中 V 表示图中点的集合，E 表示图中边的集合，n=|V|，m=|E|。</p>
@@ -8954,7 +8966,65 @@ dist[2] = 2，现在 dist[3] 是正无穷，用 2 号结点来更新 3 号结点
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="数学知识">数学知识
+</div><h3 id="二分图">二分图
+</h3><p>给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环。</p>
+<p>请你判断这个图是否是二分图。</p>
+<h4 id="输入格式-14">输入格式
+</h4><p>第一行包含两个整数 n 和 m。</p>
+<p>接下来 m 行，每行包含两个整数 u 和 v，表示点 u 和点 v 之间存在一条边。</p>
+<h4 id="输出格式-14">输出格式
+</h4><p>如果给定图是二分图，则输出 <code>Yes</code>，否则输出 <code>No</code>。</p>
+<h4 id="数据范围-14">数据范围
+</h4><p>1≤n,m≤105</p>
+<h4 id="输入样例-14">输入样例：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="mi">4</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span> <span class="mi">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="输出样例-14">输出样例：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Yes</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="算法思想-6">算法思想
+</h4><p>什么叫二分图</p>
+<p>有两顶点集且图中每条边的的两个顶点分别位于两个顶点集中，每个顶点集中没有边直接相连接！</p>
+<p>说人话的定义：图中点通过移动能分成左右两部分，左侧的点只和右侧的点相连，右侧的点只和左侧的点相连。</p>
+<p>下图就是个二分图：</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/twopic1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>下图不是个二分图</p>
+<p><img src="https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/twopic2.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h1 id="数学知识">数学知识
 </h1><h1 id="动态规划">动态规划
 </h1><h1 id="贪心算法">贪心算法
 </h1><h1 id="时空复杂度分析">时空复杂度分析

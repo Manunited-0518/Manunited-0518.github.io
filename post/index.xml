@@ -7664,7 +7664,9 @@ dist[2] = 2，现在 dist[3] 是正无穷，用 2 号结点来更新 3 号结点
 &lt;li&gt;k, i, j 去更新d&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;最小生成树&#34;&gt;最小生成树
-&lt;/h2&gt;&lt;h3 id=&#34;prim-算法&#34;&gt;Prim 算法
+&lt;/h2&gt;&lt;p&gt;![](&lt;a class=&#34;link&#34; href=&#34;https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/&lt;/a&gt;截屏2025-03-16 18.08.40.png)&lt;/p&gt;
+&lt;h3 id=&#34;prim-算法&#34;&gt;Prim 算法
 &lt;/h3&gt;&lt;p&gt;给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环，边权可能为负数。&lt;/p&gt;
 &lt;p&gt;求最小生成树的树边权重之和，如果最小生成树不存在则输出 &lt;code&gt;impossible&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;给定一张边带权的无向图 G=(V,E)，其中 V 表示图中点的集合，E 表示图中边的集合，n=|V|，m=|E|。&lt;/p&gt;
@@ -8243,7 +8245,65 @@ dist[2] = 2，现在 dist[3] 是正无穷，用 2 号结点来更新 3 号结点
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;数学知识&#34;&gt;数学知识
+&lt;/div&gt;&lt;h3 id=&#34;二分图&#34;&gt;二分图
+&lt;/h3&gt;&lt;p&gt;给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环。&lt;/p&gt;
+&lt;p&gt;请你判断这个图是否是二分图。&lt;/p&gt;
+&lt;h4 id=&#34;输入格式-14&#34;&gt;输入格式
+&lt;/h4&gt;&lt;p&gt;第一行包含两个整数 n 和 m。&lt;/p&gt;
+&lt;p&gt;接下来 m 行，每行包含两个整数 u 和 v，表示点 u 和点 v 之间存在一条边。&lt;/p&gt;
+&lt;h4 id=&#34;输出格式-14&#34;&gt;输出格式
+&lt;/h4&gt;&lt;p&gt;如果给定图是二分图，则输出 &lt;code&gt;Yes&lt;/code&gt;，否则输出 &lt;code&gt;No&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;数据范围-14&#34;&gt;数据范围
+&lt;/h4&gt;&lt;p&gt;1≤n,m≤105&lt;/p&gt;
+&lt;h4 id=&#34;输入样例-14&#34;&gt;输入样例：
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;输出样例-14&#34;&gt;输出样例：
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Yes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;算法思想-6&#34;&gt;算法思想
+&lt;/h4&gt;&lt;p&gt;什么叫二分图&lt;/p&gt;
+&lt;p&gt;有两顶点集且图中每条边的的两个顶点分别位于两个顶点集中，每个顶点集中没有边直接相连接！&lt;/p&gt;
+&lt;p&gt;说人话的定义：图中点通过移动能分成左右两部分，左侧的点只和右侧的点相连，右侧的点只和左侧的点相连。&lt;/p&gt;
+&lt;p&gt;下图就是个二分图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/twopic1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;下图不是个二分图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Manunited-0518/ImageStore/main/images/twopic2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;数学知识&#34;&gt;数学知识
 &lt;/h1&gt;&lt;h1 id=&#34;动态规划&#34;&gt;动态规划
 &lt;/h1&gt;&lt;h1 id=&#34;贪心算法&#34;&gt;贪心算法
 &lt;/h1&gt;&lt;h1 id=&#34;时空复杂度分析&#34;&gt;时空复杂度分析
